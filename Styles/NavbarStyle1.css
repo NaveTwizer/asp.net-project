@@ -1,0 +1,35 @@
+﻿* {
+    margin:0
+}
+ul {
+    list-style-type: none;
+    background-color: lightblue;
+    padding: 20px;
+    border: solid 1px black;
+    margin: 2px;
+    overflow: hidden;
+}
+body {
+    background-color:gray;
+    direction:rtl;
+}
+li {
+    float: right;
+}
+
+li a {
+    background-color: antiquewhite;
+    display: block;
+    width: 100px;
+    padding: 10px;
+    margin: 1px;
+    text-align: center;
+}
+
+li a:hover {
+    background-color: black;
+    color: white;
+}
+.title {
+    text-align:center;
+}

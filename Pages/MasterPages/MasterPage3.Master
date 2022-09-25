@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage3.master.cs" Inherits="Nave_Project2.Pages.MasterPages.MasterPage3" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="navbar-div">
+        <ul>
+            <li>
+                <a href="../RegularPages/AdminHomePage.aspx">דף הבית</a>
+            </li>
+            <li>
+                <a href="../RegularPages/login.aspx">התחבר</a>
+            </li>
+            <li>
+                <a href="../RegularPages/register.aspx">רישום</a>
+            </li>
+            <li>
+                <a href="../RegularPages/purchases.aspx">רכישות</a>
+            </li>
+            <li>
+                <a href="../RegularPages/AboutUs.aspx">אודות</a>
+            </li>
+            <li>
+                <a href="../RegularPages/feedback.aspx">משוב</a>
+            </li>
+            <li>
+                <a href="../RegularPages/exit.aspx">התנתקות</a>
+            </li>
+            <li class="dropDown">
+                <a href="../RegularPages/login.aspx">כניסת מנהל</a>
+                <div class="dropDownContent">
+                    <a href="../RegularPages/users.aspx">משתמשים</a>
+                    <a href="../RegularPages/countries.aspx">מדינות</a>
+                    <a href="../RegularPages/manufacturers.aspx">יצרנים</a>
+                    <a href="../RegularPages/suppliers.aspx">ספקים</a>
+                    <a href="../RegularPages/products.aspx">מוצרים</a>
+                    <a href="../RegularPages/statistics.aspx">סטטיסטיקה</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

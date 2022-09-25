@@ -1,0 +1,46 @@
+﻿body {
+    background-color:gray;
+    direction:rtl;
+    margin:0;
+}
+ul {
+    list-style-type: none;
+    background-color: lightblue;
+    padding: 20px;
+    border: solid 1px black;
+    margin: 2px;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+    margin:0;
+    padding:0;
+}
+
+li a {
+    background-color: antiquewhite;
+    display: block;
+    width: 100px;
+    padding: 10px;
+    margin: 1px;
+    text-align: center;
+}
+
+li a:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.dropDownContent {
+    display: none;
+    position: absolute; 
+    width: 50px;
+    z-index: 1;
+    background-color: antiquewhite;
+}
+
+.dropDown:hover .dropDownContent {
+    display: block;
+}
