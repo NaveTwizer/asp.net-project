@@ -82,6 +82,7 @@
     <Content Include="Pages\RegularPages\statistics.aspx" />
     <Content Include="Pages\RegularPages\suppliers.aspx" />
     <Content Include="Pages\RegularPages\users.aspx" />
+    <Content Include="Scripts\registration.js" />
     <Content Include="Styles\dropdown.css" />
     <Content Include="Styles\feedback.css" />
     <Content Include="Styles\login.css" />
@@ -233,7 +234,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
-    <Folder Include="Scripts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -11,7 +11,7 @@
                 <label for="username">שם משתמש</label>
                 <br />
                 <input type="text" id="username" name="username" size="25" height="200"/>
-                <div class="div-error" id="username-error-div">retard</div>
+                <div class="div-error" id="username-error-div"></div>
 
                 <label for="password">סיסמה</label>
                 <br />

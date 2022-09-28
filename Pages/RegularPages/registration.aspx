@@ -2,12 +2,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Styles/NavbarStyle1.css" rel="stylesheet" />
     <link href="../../Styles/register.css" rel="stylesheet" />
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script src="../../Scripts/registration.js" type="text/javascript"></script>
     <div class="fullscreen" dir="rtl">
         <h1 class="title">הרשמה</h1>
+        <button id="btn1">Fucking retarded SHIT</button>
         <div class="form-div">
-            <form runat="server" method="post" action="#" id="form1">
+            <form method="post" action="" id="form1" onsubmit="alert('fucking shit')">
                 <table>
                     <tr>
                         <td>
@@ -22,18 +25,13 @@
                     </tr>
                     <tr>
                         <td>
-                            <div class="error-td"></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
                             <label for="pswd">סיסמה</label>
                         </td>
                         <td>
                             <input id="pswd" name="pswd" type="password"  class="inputs"/>
                         </td>
                         <td class="error-td" id="password-error">
-                            
+
                         </td>
                     </tr>
                     <tr>
@@ -76,15 +74,15 @@
                         <td>
                             <label>
                                 זכר
-                                <input type="radio" id="male" name="male" />
+                                <input type="radio" id="male" name="gender" />
                             </label>
                             <label>
                                 נקבה
-                                <input type="radio" id="female" name="female" />
+                                <input type="radio" id="female" name="gender" />
                             </label>
                             <label>
                                 אחר
-                                <input type="radio" onclick="alert('Clown!');this.checked = false;" />
+                                <input type="radio" onclick="this.checked = false;" />
                             </label>
                         </td>
                         <td class="error-td" id="gender-error">
@@ -110,7 +108,7 @@
                     <tr>
                         <td>
                             <input type="reset" value="נקה" />
-                            <input type="submit" value="שלח" />
+                            <input type="submit" id="submit" name="submit" value="הירשם" />
                         </td>
                     </tr>
                     <tr>

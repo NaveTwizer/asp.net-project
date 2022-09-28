@@ -13,5 +13,10 @@ namespace Nave_Project2.Pages.RegularPages
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

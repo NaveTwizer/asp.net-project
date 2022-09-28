@@ -13,14 +13,18 @@
     border: 1px solid black;
     font-size: 25px;
     border-collapse: collapse;
+    text-align:center;
+    padding:20px;
 }
 
 .radio-buttons {
-    float: right;
     border: 0.5px solid black;
     border-collapse: collapse;
+    margin-left:20px;
 }
-
-.label-questions {
-    float: right;
+.title {
+    font-size:50px;
+}
+label {
+    color:white;
 }

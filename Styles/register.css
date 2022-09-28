@@ -4,7 +4,6 @@
 }
 
 body {
-    background: url("../../images/EzioAndAltair.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -16,7 +15,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid black;
-    font-size: 25px;
+    font-size: 35px;
     border-collapse: collapse;
 }
 
@@ -26,7 +25,7 @@ table {
 
 .error-td {
     color: red;
-    font-size:10px;
+    font-size:20px;
 }
 
 tr {

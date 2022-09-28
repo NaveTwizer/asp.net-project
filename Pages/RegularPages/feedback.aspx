@@ -11,7 +11,10 @@
                 <label for="username">שם משתמש</label>
                 <input name="username" id="username" />
                 <br />
-                <label class="label-questions">עיצוב האתר</label>
+                <label for="date">תאריך</label>
+                <input type="date" id="date" name="date" />
+                <br />
+                <label>עיצוב האתר</label>
                 <br />
                 <label class="radio-buttons">
                     <input type="radio" name="design" />
@@ -30,10 +33,78 @@
                     4
                 </label>
                 <label class="radio-buttons">
-                    <input type="radio" name="design" />
+                    <input type="radio" name="accessibility" />
                     5
                 </label>
                 <br />
+                <label>נגישות באתר</label>
+                <br />
+                <label class="radio-buttons">
+                    <input type="radio" name="accessibility" />
+                    1
+                </label>
+                <label class="radio-buttons">
+                    <input type="radio" name="accessibility" />
+                    2
+                </label>
+                <label class="radio-buttons">
+                    <input type="radio" name="accessibility" />
+                    3
+                </label>
+                <label class="radio-buttons">
+                    <input type="radio" name="accessibility" />
+                    4
+                </label>
+                <label class="radio-buttons">
+                    <input type="radio" name="accessibility" />
+                    5
+                </label>
+                <br />
+                <label>היית ממליץ עלינו לחבריך?</label>
+                <br />
+                <label class="radio-buttons">
+                    <input type="radio" name="suggest" />
+                    1
+                </label>
+                <label class="radio-buttons">
+                    <input type="radio" name="suggest" />
+                    2
+                </label>
+                <label class="radio-buttons">
+                    <input type="radio" name="suggest" />
+                    3
+                </label>
+                <label class="radio-buttons">
+                    <input type="radio" name="suggest" />
+                    4
+                </label>
+                <label class="radio-buttons">
+                    <input type="radio" name="suggest" />
+                    5
+                </label>
+                <br />
+                <label>חוות דעת כללית על האתר</label>
+                <br />
+                <label class="radio-buttons">
+                    <input type="radio" name="overall" />
+                    1
+                </label>
+                <label class="radio-buttons">
+                    <input type="radio" name="overall" />
+                    2
+                </label>
+                <label class="radio-buttons">
+                    <input type="radio" name="overall" />
+                    3
+                </label>
+                <label class="radio-buttons">
+                    <input type="radio" name="overall" />
+                    4
+                </label>
+                <label class="radio-buttons">
+                    <input type="radio" name="overall" />
+                    5
+                </label>
             </form>
         </div>
     </div>
