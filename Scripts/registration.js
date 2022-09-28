@@ -6,6 +6,7 @@ const address = document.getElementById('address');
 //const name = document.getElementsByName('gender');
 const email = document.getElementById('email');
 const birthday = document.getElementById('birthday');
+const form = document.getElementById('form1');
 
 
 
@@ -13,21 +14,9 @@ const usernameError = document.getElementById('username-error');
 const passwordError = document.getElementById("password-error");
 const nameError = document.getElementById('name-error');
 
-const form = document.getElementById('form1');
 
-if (form === null)
-    window.alert('fuck');
-else {
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        form.submit();
-    })
-}
-document.getElementById('btn1').addEventListener('click', () => {
-    window.alert('fucking shit')
-})
 function isValid() {
-    return false;
+    return true;
 }
 function validUsername() {
     usernameError.innerHTML = "";

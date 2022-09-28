@@ -5,12 +5,10 @@
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <script src="../../Scripts/registration.js" type="text/javascript"></script>
     <div class="fullscreen" dir="rtl">
         <h1 class="title">הרשמה</h1>
-        <button id="btn1">Fucking retarded SHIT</button>
         <div class="form-div">
-            <form method="post" action="" id="form1" onsubmit="alert('fucking shit')">
+            <form method="post" action="" id="form1" runat="server" onsubmit="return isValid()">
                 <table>
                     <tr>
                         <td>
@@ -120,4 +118,5 @@
             </form>
         </div>
     </div>
+    <script src="../../Scripts/registration.js" type="text/javascript"></script>
 </asp:Content>
