@@ -1,22 +1,30 @@
-﻿const username = document.getElementById('username');
+﻿// Input elements
+const username = document.getElementById('username');
 const password = document.getElementById('pswd');
 const name = document.getElementById('name');
 const lastname = document.getElementById('lastname');
 const address = document.getElementById('address');
-//const name = document.getElementsByName('gender');
 const email = document.getElementById('email');
 const birthday = document.getElementById('birthday');
 const form = document.getElementById('form1');
+const addressElement = document.getElementById('address');
+const emailElement = document.getElementById('email');
 
 
 
+// Error elements
 const usernameError = document.getElementById('username-error');
 const passwordError = document.getElementById("password-error");
 const nameError = document.getElementById('name-error');
+const lastNameError = document.getElementById('lastname-error');
+const addressError = document.getElementById('address-error');
+const emailError = document.getElementById('email-error');
+
 
 
 function isValid() {
-    return true;
+    resetErrorMessages();
+    return (validUsername() && validPassword() && validName() && validLastName())
 }
 function validUsername() {
     usernameError.innerHTML = "";
@@ -42,22 +50,23 @@ function validPassword() {
         passwordError.innerHTML = "סיסמה קצרה מידי";
         return false;
     }
-    let strength = 0;
-    if (pswd.match(/[a-z]+/)) {
-        strength += 1;
+    var matchedCase = new Array();
+    matchedCase.push("[$@$!%*#?&]"); // Special Charector
+    matchedCase.push("[A-Z]");      // Uppercase Alpabates
+    matchedCase.push("[0-9]");      // Numbers
+    matchedCase.push("[a-z]");     // Lowercase Alphabates
+    var strength = 0;
+    for (var i = 0; i < matchedCase.length; i++) {
+        if (new RegExp(matchedCase[i]).test(pswd)) {
+            strength++;
+        }
     }
-    if (pswd.match(/[A-Z]+/)) {
-        strength += 1;
-    }
-    if (pswd.match(/[0-9]+/)) {
-        strength += 1;
-    }
-    if (pswd.match(/[$@#&amp;!_-]+/)) {
-        strength += 1;
-    }
-    if (strength < 4) {
-        passwordError.innerHTML = "סיסמה חלשה";
-        return false;
+    switch (strength) {
+        case 0:
+        case 1:
+        case 2:
+            passwordError.innerHTML = "סיסמה חלשה";
+            return false;
     }
     return true;
 }
@@ -68,4 +77,42 @@ function validName() {
         nameError.innerHTML = "הזן את שמך";
         return false;
     }
+    if (nme.length === 1) {
+        nameError.innerHTML = "שם קצר מידי.";
+        return false;
+    }
+    return true;
+}
+function validLastName() {
+    lastNameError.innerHTML = "";
+    const lastName = lastname.value;
+
+    if (lastName === "") {
+        lastNameError.innerHTML = "הזן שם משפחה";
+        return false;
+    }
+    return true;
+}
+function validAddress() {
+    addressError.innerHTML = "";
+    const address = addressElement.value;
+    if (address === "") {
+        addressError.innerHTML = "הזן כתובת";
+        return false;
+    }
+    return true;
+}
+function validEmail() {
+    emailError.innerHTML = "";
+    const email = emailElement.value;
+    if (email === "") {
+        emailError.innerHTML = "הזן מייל";
+        return false;
+    }
+    return true;
+}
+const resetErrorMessages = () => {
+    document.querySelectorAll('.error-td').forEach(e => {
+        e.innerHTML = "";
+    })
 }

@@ -7,7 +7,7 @@
     <h1 class="title">כניסה</h1>
     <div class="fullscreen">
         <div class="form-div">
-            <form action="" method="post" runat="server">
+            <form action="" method="post" runat="server" onsubmit="return onSubmit()">
                 <label for="username">שם משתמש</label>
                 <br />
                 <input type="text" id="username" name="username" size="25" height="200"/>
@@ -16,6 +16,8 @@
                 <label for="password">סיסמה</label>
                 <br />
                 <input type="password" name="pswd" id="pswd" size="25"/>
+                <br />
+                <input type="checkbox" id="show-password" />
                 <div class="div-error" id="password-error-div"></div>
                 
                 <br /> <br />
@@ -23,4 +25,5 @@
             </form>
         </div>
     </div>
+    <script src="../../Scripts/login.js"></script>
 </asp:Content>

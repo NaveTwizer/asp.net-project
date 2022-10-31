@@ -4,6 +4,7 @@
 }
 
 body {
+    background:url("../Images/EzioAndAltair.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }

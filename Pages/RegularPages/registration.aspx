@@ -111,7 +111,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <p>כבר רשום? <a href="login.aspx">התחבר</a></p>
+                            <p>כבר רשום? <a href="login.aspx" style="color:white;">התחבר</a></p>
                         </td>
                     </tr>
                 </table>

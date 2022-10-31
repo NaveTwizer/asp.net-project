@@ -69,6 +69,9 @@
   <ItemGroup>
     <Content Include="Pages\RegularPages\AdminHomePage.aspx" />
     <Content Include="Pages\RegularPages\countries.aspx" />
+    <Content Include="Pages\RegularPages\Data\Branches.aspx" />
+    <Content Include="Pages\RegularPages\Data\Products.aspx" />
+    <Content Include="Pages\RegularPages\Data\Users.aspx" />
     <Content Include="Pages\RegularPages\LoggedHomePage.aspx" />
     <Content Include="Pages\RegularPages\AboutUs.aspx" />
     <Content Include="Pages\RegularPages\exit.aspx" />
@@ -82,6 +85,7 @@
     <Content Include="Pages\RegularPages\statistics.aspx" />
     <Content Include="Pages\RegularPages\suppliers.aspx" />
     <Content Include="Pages\RegularPages\users.aspx" />
+    <Content Include="Scripts\login.js" />
     <Content Include="Scripts\registration.js" />
     <Content Include="Styles\dropdown.css" />
     <Content Include="Styles\feedback.css" />
@@ -111,6 +115,27 @@
     </Compile>
     <Compile Include="Pages\RegularPages\countries.aspx.designer.cs">
       <DependentUpon>countries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Data\Branches.aspx.cs">
+      <DependentUpon>Branches.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Data\Branches.aspx.designer.cs">
+      <DependentUpon>Branches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Data\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Data\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Data\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Data\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegularPages\LoggedHomePage.aspx.cs">
       <DependentUpon>LoggedHomePage.aspx</DependentUpon>
@@ -233,6 +258,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="images\" />
   </ItemGroup>
   <PropertyGroup>
