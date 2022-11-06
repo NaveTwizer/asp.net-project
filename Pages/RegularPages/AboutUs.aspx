@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/MasterPages/MasterPage2.Master" AutoEventWireup="true" CodeBehind="AboutUs.aspx.cs" Inherits="Nave_Project2.Pages.RegularPages.AboutUs" %>
+﻿<%@ Page Title="אודותינו" Language="C#" MasterPageFile="~/Pages/MasterPages/MasterPage2.Master" AutoEventWireup="true" CodeBehind="AboutUs.aspx.cs" Inherits="Nave_Project2.Pages.RegularPages.AboutUs" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Styles/NavbarStyle1.css" rel="stylesheet" />
     <style type="text/css">

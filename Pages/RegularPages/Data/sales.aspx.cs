@@ -4,12 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.OleDb;
 using System.Data;
+using System.Data.OleDb;
+
 
 namespace Nave_Project2.Pages.RegularPages.Data
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class sales : System.Web.UI.Page
     {
         public string GetConnectionString()
         {
@@ -26,36 +27,32 @@ namespace Nave_Project2.Pages.RegularPages.Data
             conn.Close();
             return ds;
         }
-        public void GetUsers(DataSet ds)
+        public string ParseRow(DataRow r, string att)
         {
-            string all = "<table border='1' align='center'>";
-            all += "<tr><td>Username</td><td>Password</td><td>First Name</td><td>Last Name</td><td>Address</td><td>Gender</td><td>Mail</td><td>Birthday</td></tr>";
-            
-            foreach (DataRow row in ds.Tables[0].Rows)
+            return $"<td>{r[att]}</td>";
+        }
+        public void GetSales(DataSet dataset)
+        {
+            string all = "<table>";
+            all += "<tr><td>קוד מכירה</td><td>תאריך</td><td>קוד סניף</td><td>תז עובד</td></tr>";
+
+            foreach (DataRow r in dataset.Tables[0].Rows)
             {
                 all += "<tr>";
-                all += "<td>" + row["username"] + "</td>";
-                all += "<td>" + row["pswd"] + "</td>";
-                all += "<td>" + row["firstname"] + "</td>";
-                all += "<td>" + row["lastname"] + "</td>";
-                all += "<td>" + row["address"] + "</td>";
-                all += "<td>" + row["gender"] + "</td>";
-                all += "<td>" + row["mail"] + "</td>";
-                all += "<td>" + row["birthday"] + "</td>";
+                all += ParseRow(r, "SaleCode");
+                all += ParseRow(r, "SaleDate");
+                all += ParseRow(r, "BranchCode");
+                all += ParseRow(r, "WorkerID");
                 all += "<tr>";
             }
             all += "</table>";
             Response.Write(all);
         }
-        public void ListUsers()
+        public void ListSales()
         {
-            string sql = "SELECT * FROM Users\nORDER BY username ASC;";
-            DataSet ds = GetDataSet(sql);
-            GetUsers(ds);
-        }
-        public void ExecuteJavascript()
-        {
-            ClientScript.RegisterStartupScript(GetType(), "hwa", "alert('Hello World');", true);
+            string query = "SELECT * FROM SalesTable\nORDER BY SaleDate DESC;";
+            DataSet ds = GetDataSet(query);
+            GetSales(ds);
         }
         protected void Page_Load(object sender, EventArgs e)
         {

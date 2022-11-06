@@ -68,25 +68,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pages\RegularPages\AdminHomePage.aspx" />
-    <Content Include="Pages\RegularPages\countries.aspx" />
     <Content Include="Pages\RegularPages\Data\Branches.aspx" />
-    <Content Include="Pages\RegularPages\Data\Products.aspx" />
-    <Content Include="Pages\RegularPages\Data\Users.aspx" />
+    <Content Include="Pages\RegularPages\Data\countries.aspx" />
+    <Content Include="Pages\RegularPages\Data\manufactures.aspx" />
+    <Content Include="Pages\RegularPages\Data\products.aspx" />
+    <Content Include="Pages\RegularPages\Data\sales.aspx" />
+    <Content Include="Pages\RegularPages\Data\statistics.aspx" />
+    <Content Include="Pages\RegularPages\Data\suppliers.aspx" />
+    <Content Include="Pages\RegularPages\Data\users.aspx" />
     <Content Include="Pages\RegularPages\LoggedHomePage.aspx" />
     <Content Include="Pages\RegularPages\AboutUs.aspx" />
     <Content Include="Pages\RegularPages\exit.aspx" />
     <Content Include="Pages\RegularPages\feedback.aspx" />
     <Content Include="Pages\RegularPages\HomePage.aspx" />
     <Content Include="Pages\RegularPages\login.aspx" />
-    <Content Include="Pages\RegularPages\manufacturers.aspx" />
-    <Content Include="Pages\RegularPages\products.aspx" />
-    <Content Include="Pages\RegularPages\purchases.aspx" />
     <Content Include="Pages\RegularPages\registration.aspx" />
-    <Content Include="Pages\RegularPages\statistics.aspx" />
-    <Content Include="Pages\RegularPages\suppliers.aspx" />
-    <Content Include="Pages\RegularPages\users.aspx" />
     <Content Include="Scripts\login.js" />
     <Content Include="Scripts\registration.js" />
+    <Content Include="Styles\DataFilesStyle.css" />
     <Content Include="Styles\dropdown.css" />
     <Content Include="Styles\feedback.css" />
     <Content Include="Styles\login.css" />
@@ -109,13 +108,6 @@
     <Compile Include="Pages\RegularPages\AdminHomePage.aspx.designer.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\RegularPages\countries.aspx.cs">
-      <DependentUpon>countries.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\RegularPages\countries.aspx.designer.cs">
-      <DependentUpon>countries.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\RegularPages\Data\Branches.aspx.cs">
       <DependentUpon>Branches.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -123,19 +115,54 @@
     <Compile Include="Pages\RegularPages\Data\Branches.aspx.designer.cs">
       <DependentUpon>Branches.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\RegularPages\Data\Products.aspx.cs">
-      <DependentUpon>Products.aspx</DependentUpon>
+    <Compile Include="Pages\RegularPages\Data\countries.aspx.cs">
+      <DependentUpon>countries.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\RegularPages\Data\Products.aspx.designer.cs">
-      <DependentUpon>Products.aspx</DependentUpon>
+    <Compile Include="Pages\RegularPages\Data\countries.aspx.designer.cs">
+      <DependentUpon>countries.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\RegularPages\Data\Users.aspx.cs">
-      <DependentUpon>Users.aspx</DependentUpon>
+    <Compile Include="Pages\RegularPages\Data\manufactures.aspx.cs">
+      <DependentUpon>manufactures.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\RegularPages\Data\Users.aspx.designer.cs">
-      <DependentUpon>Users.aspx</DependentUpon>
+    <Compile Include="Pages\RegularPages\Data\manufactures.aspx.designer.cs">
+      <DependentUpon>manufactures.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Data\products.aspx.cs">
+      <DependentUpon>products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Data\products.aspx.designer.cs">
+      <DependentUpon>products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Data\sales.aspx.cs">
+      <DependentUpon>sales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Data\sales.aspx.designer.cs">
+      <DependentUpon>sales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Data\statistics.aspx.cs">
+      <DependentUpon>statistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Data\statistics.aspx.designer.cs">
+      <DependentUpon>statistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Data\suppliers.aspx.cs">
+      <DependentUpon>suppliers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Data\suppliers.aspx.designer.cs">
+      <DependentUpon>suppliers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Data\users.aspx.cs">
+      <DependentUpon>users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Data\users.aspx.designer.cs">
+      <DependentUpon>users.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegularPages\LoggedHomePage.aspx.cs">
       <DependentUpon>LoggedHomePage.aspx</DependentUpon>
@@ -193,54 +220,12 @@
     <Compile Include="Pages\RegularPages\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\RegularPages\manufacturers.aspx.cs">
-      <DependentUpon>manufacturers.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\RegularPages\manufacturers.aspx.designer.cs">
-      <DependentUpon>manufacturers.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\RegularPages\products.aspx.cs">
-      <DependentUpon>products.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\RegularPages\products.aspx.designer.cs">
-      <DependentUpon>products.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\RegularPages\purchases.aspx.cs">
-      <DependentUpon>purchases.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\RegularPages\purchases.aspx.designer.cs">
-      <DependentUpon>purchases.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\RegularPages\registration.aspx.cs">
       <DependentUpon>registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\RegularPages\registration.aspx.designer.cs">
       <DependentUpon>registration.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\RegularPages\statistics.aspx.cs">
-      <DependentUpon>statistics.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\RegularPages\statistics.aspx.designer.cs">
-      <DependentUpon>statistics.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\RegularPages\suppliers.aspx.cs">
-      <DependentUpon>suppliers.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\RegularPages\suppliers.aspx.designer.cs">
-      <DependentUpon>suppliers.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\RegularPages\users.aspx.cs">
-      <DependentUpon>users.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\RegularPages\users.aspx.designer.cs">
-      <DependentUpon>users.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

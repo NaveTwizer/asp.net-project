@@ -5,6 +5,7 @@
 <html>
 <head runat="server">
     <title></title>
+    <link rel="icon" href="../../images/logo.png">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -12,44 +13,39 @@
     <div class="navbar-div">
         <ul>
             <li>
-                <a href="../RegularPages/AdminHomePage.aspx">דף הבית</a>
+                <asp:HyperLink NavigateUrl="~/Pages/RegularPages/AdminHomePage.aspx" Text="דף הבית" runat="server" />
             </li>
             <li>
-                <a href="../RegularPages/login.aspx">התחבר</a>
+                <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/sales.aspx" Text="רכישות" runat="server" />
             </li>
             <li>
-                <a href="../RegularPages/register.aspx">רישום</a>
+                <asp:HyperLink NavigateUrl="~/Pages/RegularPages/AboutUs.aspx" Text="אודות" runat="server" />                
             </li>
             <li>
-                <a href="../RegularPages/purchases.aspx">רכישות</a>
+                <asp:HyperLink NavigateUrl="~/Pages/RegularPages/feedback.aspx" Text="משוב" runat="server" />                
             </li>
             <li>
-                <a href="../RegularPages/AboutUs.aspx">אודות</a>
+                <asp:HyperLink NavigateUrl="~/Pages/RegularPages/exit.aspx" Text="התנתקות" runat="server" />                
             </li>
-            <li>
-                <a href="../RegularPages/feedback.aspx">משוב</a>
-            </li>
-            <li>
-                <a href="../RegularPages/exit.aspx">התנתקות</a>
-            </li>
-            <li class="dropDown">
-                <a href="../RegularPages/login.aspx">כניסת מנהל</a>
+            <li class="dropDown" style="padding:0;margin:0;">
+                <a>כניסת מנהל</a>
                 <div class="dropDownContent">
-                    <a href="../RegularPages/users.aspx">משתמשים</a>
-                    <a href="../RegularPages/countries.aspx">מדינות</a>
-                    <a href="../RegularPages/manufacturers.aspx">יצרנים</a>
-                    <a href="../RegularPages/suppliers.aspx">ספקים</a>
-                    <a href="../RegularPages/products.aspx">מוצרים</a>
-                    <a href="../RegularPages/statistics.aspx">סטטיסטיקה</a>
+                    <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/users.aspx" Text="משתמשים" runat="server" />
+                    <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/countries.aspx" Text="מדינות" runat="server" />
+                    <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/manufactures.aspx" Text="יצרנים" runat="server" />
+
+                    <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/suppliers.aspx" Text="ספקים" runat="server" />
+                    <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/products.aspx" Text="מוצרים" runat="server" />
+                    <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/statistics.aspx" Text="סטטיסטיקה" runat="server" />
                 </div>
             </li>
         </ul>
     </div>
-    <form id="form1" runat="server">
+
+    <!--  Child content -->
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-    </form>
 </body>
 </html>

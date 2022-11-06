@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/MasterPages/MasterPage3.Master" AutoEventWireup="true" CodeBehind="AdminHomePage.aspx.cs" Inherits="Nave_Project2.Pages.RegularPages.AdminHomePage" %>
+﻿<%@ Page Title="דף הבית" Language="C#" MasterPageFile="~/Pages/MasterPages/MasterPage3.Master" AutoEventWireup="true" CodeBehind="AdminHomePage.aspx.cs" Inherits="Nave_Project2.Pages.RegularPages.AdminHomePage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Styles/NavbarStyle1.css" rel="stylesheet" />
     <link href="../../Styles/dropdown.css" rel="stylesheet" />

@@ -33,7 +33,7 @@
                     4
                 </label>
                 <label class="radio-buttons">
-                    <input type="radio" name="accessibility" />
+                    <input type="radio" name="design" />
                     5
                 </label>
                 <br />

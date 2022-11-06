@@ -1,4 +1,4 @@
-﻿<%@ Page Title="משתמשים" Language="C#" MasterPageFile="~/Pages/MasterPages/MasterPage2.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="Nave_Project2.Pages.RegularPages.Data.WebForm1" %>
+﻿<%@ Page Title="משתמשים" Language="C#" MasterPageFile="~/Pages/MasterPages/MasterPage3.Master" AutoEventWireup="true" CodeBehind="users.aspx.cs" Inherits="Nave_Project2.Pages.RegularPages.Data.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../../Styles/dropdown.css" rel="stylesheet" />
     <link href="../../../Styles/NavbarStyle1.css" rel="stylesheet" />

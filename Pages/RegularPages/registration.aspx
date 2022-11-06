@@ -1,4 +1,4 @@
-﻿<%@ Page Title="הרשמה" Language="C#" MasterPageFile="~/Pages/MasterPages/MasterPage2.Master" AutoEventWireup="true" CodeBehind="registration.aspx.cs" Inherits="Nave_Project2.Pages.RegularPages.registration" %>
+﻿<%@ Page Title="הרשמה" Language="C#" MasterPageFile="~/Pages/MasterPages/MasterPage1.Master" AutoEventWireup="true" CodeBehind="registration.aspx.cs" Inherits="Nave_Project2.Pages.RegularPages.registration" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Styles/NavbarStyle1.css" rel="stylesheet" />
     <link href="../../Styles/register.css" rel="stylesheet" />

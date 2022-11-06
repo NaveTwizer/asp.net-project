@@ -8,7 +8,7 @@ using System.Data;
 using System.Data.OleDb;
 namespace Nave_Project2.Pages.RegularPages.Data
 {
-    public partial class Branches : System.Web.UI.Page
+    public partial class suppliers : System.Web.UI.Page
     {
         public string GetConnectionString()
         {
@@ -29,32 +29,32 @@ namespace Nave_Project2.Pages.RegularPages.Data
         {
             return $"<td>{r[att]}</td>";
         }
-        public void GetBranches(DataSet ds)
+        public void GetSuppliers(DataSet ds)
         {
-            string all = "<table border='1' align='center'>";
-            all += "<tr><td>סניף</td><td>קוד סניף</td><td>כתובת</td><td>מספר טלפון</td></tr>";
-            foreach (DataRow row in ds.Tables[0].Rows)
+            string all = "<table>";
+            all += "<tr><td>שם ספק</td><td>קוד ספק</td><td>כתובת</td><td>טלפון</td><td>מייל</td></tr>";
+
+            foreach (DataRow r in ds.Tables[0].Rows)
             {
                 all += "<tr>";
-                all += ParseRow(row, "BranchesName");
-                all += ParseRow(row, "BranchesCode");
-                all += ParseRow(row, "BranchesAddress");
-                all += ParseRow(row, "BranchesPhone");
+                all += ParseRow(r, "ProviderName");
+                all += ParseRow(r, "ProviderCode");
+                all += ParseRow(r, "ProviderAdress");
+                all += ParseRow(r, "Phone");
+                all += ParseRow(r, "Mail");
                 all += "</tr>";
             }
             all += "</table>";
             Response.Write(all);
         }
+        public void ListSuppliers()
+        {
+            string query = "SELECT * FROM ProvidersTable\nORDER BY ProviderName ASC;";
+            GetSuppliers(GetDataSet(query));
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-        public void ListBranches()
-        {
-            string q = "SELECT * FROM BranchesTable\nORDER BY BranchesName ASC;";
-            GetBranches(
-                GetDataSet(q)
-            );
         }
     }
 }

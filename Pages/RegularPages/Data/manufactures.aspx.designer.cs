@@ -8,9 +8,9 @@
 //------------------------------------------------------------------------------
 
 
-namespace Nave_Project2.Pages.RegularPages
+namespace Nave_Project2.Pages.RegularPages.Data
 {
-    public partial class purchases
+    public partial class manufactures
     {
     }
 }

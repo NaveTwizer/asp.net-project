@@ -5,6 +5,7 @@
 <html>
 <head runat="server">
     <title></title>
+    <link rel="icon" href="../../images/logo.png">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -16,9 +17,6 @@
             </li>
             <li>
                 <a href="../RegularPages/AboutUs.aspx">אודותינו</a>
-            </li>
-            <li>
-                <a href="../RegularPages/purchases.aspx">מכירות</a>
             </li>
             <li>
                 <a href="../RegularPages/feedback.aspx">משוב</a>
