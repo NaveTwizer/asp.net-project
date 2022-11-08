@@ -8,7 +8,6 @@
             margin-right: auto;
             text-align:center;
             border-collapse:collapse;
-
         }
         table td {
             border:1px solid black;

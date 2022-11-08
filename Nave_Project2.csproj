@@ -73,8 +73,11 @@
     <Content Include="Pages\RegularPages\data-pages\about-our-products.html" />
     <Content Include="Pages\RegularPages\data-pages\about-our-providers.html" />
     <Content Include="Pages\RegularPages\data-pages\about-us.html" />
+    <Content Include="Pages\RegularPages\data-pages\FAQ.html" />
     <Content Include="Pages\RegularPages\data-pages\our-branches.html" />
     <Content Include="Pages\RegularPages\data-pages\our-pictures.html" />
+    <Content Include="Pages\RegularPages\data-pages\our-vision.html" />
+    <Content Include="Pages\RegularPages\data-pages\work-with-us.html" />
     <Content Include="Pages\RegularPages\Data\Branches.aspx" />
     <Content Include="Pages\RegularPages\Data\countries.aspx" />
     <Content Include="Pages\RegularPages\Data\manufactures.aspx" />

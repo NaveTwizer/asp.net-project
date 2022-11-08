@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.OleDb;
 using System.Data;
+
+
 namespace Nave_Project2.Pages.RegularPages.DataTables
 {
     public partial class Products : System.Web.UI.Page
@@ -33,9 +35,9 @@ namespace Nave_Project2.Pages.RegularPages.DataTables
         {
             return $"<td>{r[att]}</td>";
         }
-        public void GetProducts(DataSet ds)
+        public string GetProducts(DataSet ds)
         {
-            string all = "<table border='1' align='center'>";
+            string all = "<table border='1' align='center' id='table1' runat='server'>";
             all += "<tr><td>Product Name</td><td>Product Code</td><td>Department Name</td><td>Productor Name</td><td>Provider Code</td><td>Product Description</td><td>Price</td><td>Amount</td></tr>";
             foreach (DataRow row  in ds.Tables[0].Rows)
             {
@@ -51,13 +53,14 @@ namespace Nave_Project2.Pages.RegularPages.DataTables
                 all += "<tr>";
             }
             all += "</table>";
-            Response.Write(all);
+            return all;
         }
         public void ListOfProducts()
         {
             string sql = "SELECT * FROM ProductsTable\nORDER BY ProductName ASC;";
             DataSet ds = GetDataSet(sql);
-            GetProducts(ds);
+            string all = GetProducts(ds);
+            Response.Write(all);
         }
     }
 }
