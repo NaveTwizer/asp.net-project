@@ -6,6 +6,7 @@
 <head runat="server">
     <title></title>
     <link rel="icon" href="../../images/logo.png">
+    <link href="../../Styles/dropdown.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -24,14 +25,25 @@
             <li>
                 <a href="../RegularPages/exit.aspx">התנתק</a>
             </li>
+             <li class="dropDown" style="padding:0;margin:0;">
+                <a>דפי מידע</a>
+                <div class="dropDownContent">
+                    <asp:HyperLink NavigateUrl="~/Pages/RegularPages/data-pages/about-our-founders.html" Text="על המנכל" runat="server" />
+                    <asp:HyperLink NavigateUrl="~/Pages/RegularPages/data-pages/about-our-manufactures.html" Text="על היצרנים" runat="server" />
+                    <asp:HyperLink NavigateUrl="~/Pages/RegularPages/data-pages/about-our-products.html" Text="על המוצרים" runat="server" />
+                    <asp:HyperLink NavigateUrl="~/Pages/RegularPages/data-pages/about-our-providers.html" Text="על הספקים" runat="server" />
+                    <asp:HyperLink NavigateUrl="~/Pages/RegularPages/data-pages/about-us.html" Text="עלינו" runat="server" />
+                    <asp:HyperLink NavigateUrl="~/Pages/RegularPages/data-pages/our-branches.html" Text="הסניפים שלנו" runat="server"/>
+                    <asp:HyperLink NavigateUrl="~/Pages/RegularPages/data-pages/our-pictures.html" Text="התמונות שלנו" runat="server" />
+                </div>
+            </li>
         </ul>
     </div>
     
-
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
     </div>
-    
+
 </body>
 </html>

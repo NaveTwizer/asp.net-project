@@ -2,7 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Styles/NavbarStyle1.css" rel="stylesheet" />
     <link href="../../Styles/register.css" rel="stylesheet" />
-    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="fullscreen" dir="rtl">
@@ -77,10 +76,6 @@
                             <label>
                                 נקבה
                                 <input type="radio" id="female" name="gender" />
-                            </label>
-                            <label>
-                                אחר
-                                <input type="radio" onclick="this.checked = false;" />
                             </label>
                         </td>
                         <td class="error-td" id="gender-error">

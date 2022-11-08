@@ -18,7 +18,7 @@ const isValidUsername = () => {
         return false;
     }
     if (usrname.length < 6) {
-        usernameError.innerHTML = "שם משתמש קצר מידי"
+        usernameError.innerHTML = "שם משתמש קצר מידי";
         return false;
     }
     return true;

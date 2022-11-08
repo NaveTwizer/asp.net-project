@@ -16,7 +16,7 @@
                 <a href="../RegularPages/HomePage.aspx">בית</a>
             </li>
             <li>
-                <a href="../RegularPages/AboutUs.aspx">אודותינו</a>
+                <a href="../RegularPages/data-pages/about-us.html">אודותינו</a>
             </li>
             <li>
                 <a href="../RegularPages/feedback.aspx">משוב</a>

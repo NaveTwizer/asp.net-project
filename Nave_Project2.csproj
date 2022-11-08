@@ -68,6 +68,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pages\RegularPages\AdminHomePage.aspx" />
+    <Content Include="Pages\RegularPages\data-pages\about-our-founders.html" />
+    <Content Include="Pages\RegularPages\data-pages\about-our-manufactures.html" />
+    <Content Include="Pages\RegularPages\data-pages\about-our-products.html" />
+    <Content Include="Pages\RegularPages\data-pages\about-our-providers.html" />
+    <Content Include="Pages\RegularPages\data-pages\about-us.html" />
+    <Content Include="Pages\RegularPages\data-pages\our-branches.html" />
+    <Content Include="Pages\RegularPages\data-pages\our-pictures.html" />
     <Content Include="Pages\RegularPages\Data\Branches.aspx" />
     <Content Include="Pages\RegularPages\Data\countries.aspx" />
     <Content Include="Pages\RegularPages\Data\manufactures.aspx" />

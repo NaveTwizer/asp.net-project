@@ -17,7 +17,6 @@
                 <br />
                 <input type="password" name="pswd" id="pswd" size="25"/>
                 <br />
-                <input type="checkbox" id="show-password" />
                 <div class="div-error" id="password-error-div"></div>
                 
                 <br /> <br />
