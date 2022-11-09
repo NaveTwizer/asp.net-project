@@ -67,6 +67,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Pages\RegularPages\Add\add-branch.aspx" />
+    <Content Include="Pages\RegularPages\Add\add-country.aspx" />
+    <Content Include="Pages\RegularPages\Add\add-manufactor.aspx" />
+    <Content Include="Pages\RegularPages\Add\add-product.aspx" />
+    <Content Include="Pages\RegularPages\Add\validation\add-branch.js" />
+    <Content Include="Pages\RegularPages\Add\validation\add-country.js" />
+    <Content Include="Pages\RegularPages\Add\validation\add-manufactor.js" />
     <Content Include="Pages\RegularPages\AdminHomePage.aspx" />
     <Content Include="Pages\RegularPages\data-pages\about-our-founders.html" />
     <Content Include="Pages\RegularPages\data-pages\about-our-manufactures.html" />
@@ -110,6 +117,27 @@
     </Compile>
     <Compile Include="Pages\MasterPages\MasterPage3.Master.designer.cs">
       <DependentUpon>MasterPage3.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Add\add-branch.aspx.cs">
+      <DependentUpon>add-branch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Add\add-branch.aspx.designer.cs">
+      <DependentUpon>add-branch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Add\add-country.aspx.cs">
+      <DependentUpon>add-country.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Add\add-country.aspx.designer.cs">
+      <DependentUpon>add-country.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Add\add-product.aspx.cs">
+      <DependentUpon>add-product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Add\add-product.aspx.designer.cs">
+      <DependentUpon>add-product.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegularPages\AdminHomePage.aspx.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
@@ -229,6 +257,13 @@
     </Compile>
     <Compile Include="Pages\RegularPages\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Add\add-manufactor.aspx.cs">
+      <DependentUpon>add-manufactor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Add\add-manufactor.aspx.designer.cs">
+      <DependentUpon>add-manufactor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegularPages\registration.aspx.cs">
       <DependentUpon>registration.aspx</DependentUpon>
