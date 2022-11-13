@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\add-new-icon.png" />
     <Content Include="Pages\RegularPages\Add\add-branch.aspx" />
     <Content Include="Pages\RegularPages\Add\add-country.aspx" />
     <Content Include="Pages\RegularPages\Add\add-manufactor.aspx" />
@@ -74,7 +75,9 @@
     <Content Include="Pages\RegularPages\Add\validation\add-branch.js" />
     <Content Include="Pages\RegularPages\Add\validation\add-country.js" />
     <Content Include="Pages\RegularPages\Add\validation\add-manufactor.js" />
+    <Content Include="Pages\RegularPages\Add\validation\add-product.js" />
     <Content Include="Pages\RegularPages\AdminHomePage.aspx" />
+    <Content Include="Pages\RegularPages\AdminTest.aspx" />
     <Content Include="Pages\RegularPages\data-pages\about-our-founders.html" />
     <Content Include="Pages\RegularPages\data-pages\about-our-manufactures.html" />
     <Content Include="Pages\RegularPages\data-pages\about-our-products.html" />
@@ -100,14 +103,16 @@
     <Content Include="Pages\RegularPages\HomePage.aspx" />
     <Content Include="Pages\RegularPages\login.aspx" />
     <Content Include="Pages\RegularPages\registration.aspx" />
+    <Content Include="Pages\RegularPages\WebForm1.aspx" />
     <Content Include="Scripts\login.js" />
     <Content Include="Scripts\registration.js" />
+    <Content Include="Styles\add-product.css" />
     <Content Include="Styles\DataFilesStyle.css" />
     <Content Include="Styles\dropdown.css" />
     <Content Include="Styles\feedback.css" />
-    <Content Include="Styles\login.css" />
     <Content Include="Styles\NavbarStyle1.css" />
     <Content Include="Styles\register.css" />
+    <Content Include="Styles\login.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +150,13 @@
     </Compile>
     <Compile Include="Pages\RegularPages\AdminHomePage.aspx.designer.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\AdminTest.aspx.cs">
+      <DependentUpon>AdminTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\AdminTest.aspx.designer.cs">
+      <DependentUpon>AdminTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegularPages\Data\Branches.aspx.cs">
       <DependentUpon>Branches.aspx</DependentUpon>
@@ -251,13 +263,6 @@
     <Compile Include="Pages\RegularPages\HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\RegularPages\login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\RegularPages\login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\RegularPages\Add\add-manufactor.aspx.cs">
       <DependentUpon>add-manufactor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -265,12 +270,26 @@
     <Compile Include="Pages\RegularPages\Add\add-manufactor.aspx.designer.cs">
       <DependentUpon>add-manufactor.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\RegularPages\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\RegularPages\registration.aspx.cs">
       <DependentUpon>registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\RegularPages\registration.aspx.designer.cs">
       <DependentUpon>registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -289,7 +308,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,26 +1,26 @@
-﻿<%@ Page Title="התחברות" Language="C#" MasterPageFile="~/Pages/MasterPages/MasterPage1.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Nave_Project2.Pages.RegularPages.login" %>
+﻿<%@ Page Title="כניסה" Language="C#" MasterPageFile="~/Pages/MasterPages/MasterPage1.Master" AutoEventWireup="true" CodeBehind="LoginTEST.aspx.cs" Inherits="Nave_Project2.Pages.RegularPages.LoginTEST" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Styles/NavbarStyle1.css" rel="stylesheet" />
     <link href="../../Styles/login.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1 class="title">כניסה</h1>
-    <div class="fullscreen">
+    <div class="container">
         <div class="form-div">
-            <form action="" method="post" runat="server" onsubmit="return onSubmit()">
-                <label for="username">שם משתמש</label>
+            <form runat="server" id="form1" onsubmit="return onSubmit()" method="get">
+                <label>שם משתמש</label>
+                <div>
+                    <input type="text" name="username" id="username"/>
+                    <div class="div-error" id="username-error-div"></div>
+                </div>
                 <br />
-                <input type="text" id="username" name="username" size="25" height="200"/>
-                <div class="div-error" id="username-error-div"></div>
-
-                <label for="password">סיסמה</label>
+                <label>סיסמה</label>
+                <div>
+                    <input type="password" name="pswd" id="pswd" size="25"/>
+                    <div class="div-error" id="password-error-div"></div>
+                </div>
                 <br />
-                <input type="password" name="pswd" id="pswd" size="25"/>
-                <br />
-                <div class="div-error" id="password-error-div"></div>
-                
-                <br /> <br />
-                <button class="button" id="btn" type="submit"><span>התחבר</span></button>
+                <input type="submit" value="היכנס" />
+                <input type="reset" value="נקה" />
             </form>
         </div>
     </div>

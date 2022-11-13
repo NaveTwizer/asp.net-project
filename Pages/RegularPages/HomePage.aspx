@@ -6,6 +6,8 @@
             background:url("../../images/HomeBackground.jpg");
             background-size:cover;
             background-repeat:no-repeat;
+            margin:0;
+            padding:0;
         }
         .title {
             color:black;

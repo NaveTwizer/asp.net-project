@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Nave_Project2.Pages.RegularPages
 {
-    public partial class LoginTEST : System.Web.UI.Page
+    public partial class AdminTest : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
