@@ -72,10 +72,14 @@
     <Content Include="Pages\RegularPages\Add\add-country.aspx" />
     <Content Include="Pages\RegularPages\Add\add-manufactor.aspx" />
     <Content Include="Pages\RegularPages\Add\add-product.aspx" />
+    <Content Include="Pages\RegularPages\Add\add-provider.aspx" />
+    <Content Include="Pages\RegularPages\Add\add-sale.aspx" />
+    <Content Include="Pages\RegularPages\Add\validation\add-provider.js" />
     <Content Include="Pages\RegularPages\Add\validation\add-branch.js" />
     <Content Include="Pages\RegularPages\Add\validation\add-country.js" />
     <Content Include="Pages\RegularPages\Add\validation\add-manufactor.js" />
     <Content Include="Pages\RegularPages\Add\validation\add-product.js" />
+    <Content Include="Pages\RegularPages\Add\validation\add-sale.js" />
     <Content Include="Pages\RegularPages\AdminHomePage.aspx" />
     <Content Include="Pages\RegularPages\AdminTest.aspx" />
     <Content Include="Pages\RegularPages\data-pages\about-our-founders.html" />
@@ -96,6 +100,7 @@
     <Content Include="Pages\RegularPages\Data\statistics.aspx" />
     <Content Include="Pages\RegularPages\Data\suppliers.aspx" />
     <Content Include="Pages\RegularPages\Data\users.aspx" />
+    <Content Include="Pages\RegularPages\Data\workers.aspx" />
     <Content Include="Pages\RegularPages\LoggedHomePage.aspx" />
     <Content Include="Pages\RegularPages\AboutUs.aspx" />
     <Content Include="Pages\RegularPages\exit.aspx" />
@@ -103,9 +108,12 @@
     <Content Include="Pages\RegularPages\HomePage.aspx" />
     <Content Include="Pages\RegularPages\login.aspx" />
     <Content Include="Pages\RegularPages\registration.aspx" />
+    <Content Include="Pages\RegularPages\update\update-country-new.aspx" />
+    <Content Include="Pages\RegularPages\update\update-country.aspx" />
     <Content Include="Pages\RegularPages\WebForm1.aspx" />
     <Content Include="Scripts\login.js" />
     <Content Include="Scripts\registration.js" />
+    <Content Include="Scripts\update-country.js" />
     <Content Include="Styles\add-product.css" />
     <Content Include="Styles\DataFilesStyle.css" />
     <Content Include="Styles\dropdown.css" />
@@ -143,6 +151,20 @@
     </Compile>
     <Compile Include="Pages\RegularPages\Add\add-product.aspx.designer.cs">
       <DependentUpon>add-product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Add\add-provider.aspx.cs">
+      <DependentUpon>add-provider.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Add\add-provider.aspx.designer.cs">
+      <DependentUpon>add-provider.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Add\add-sale.aspx.cs">
+      <DependentUpon>add-sale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Add\add-sale.aspx.designer.cs">
+      <DependentUpon>add-sale.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegularPages\AdminHomePage.aspx.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
@@ -214,6 +236,13 @@
     <Compile Include="Pages\RegularPages\Data\users.aspx.designer.cs">
       <DependentUpon>users.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\RegularPages\Data\workers.aspx.cs">
+      <DependentUpon>workers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\Data\workers.aspx.designer.cs">
+      <DependentUpon>workers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\RegularPages\LoggedHomePage.aspx.cs">
       <DependentUpon>LoggedHomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -283,6 +312,20 @@
     </Compile>
     <Compile Include="Pages\RegularPages\registration.aspx.designer.cs">
       <DependentUpon>registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\update\update-country-new.aspx.cs">
+      <DependentUpon>update-country-new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\update\update-country-new.aspx.designer.cs">
+      <DependentUpon>update-country-new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\update\update-country.aspx.cs">
+      <DependentUpon>update-country.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\update\update-country.aspx.designer.cs">
+      <DependentUpon>update-country.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegularPages\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

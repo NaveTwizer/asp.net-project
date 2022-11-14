@@ -36,6 +36,7 @@
 
                     <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/suppliers.aspx" Text="ספקים" runat="server" />
                     <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/products.aspx" Text="מוצרים" runat="server" />
+                    <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/workers.aspx" Text="עובדים" runat="server" />
                     <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/statistics.aspx" Text="סטטיסטיקה" runat="server" />
                 </div>
             </li>
