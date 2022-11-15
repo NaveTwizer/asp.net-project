@@ -108,9 +108,10 @@
     <Content Include="Pages\RegularPages\HomePage.aspx" />
     <Content Include="Pages\RegularPages\login.aspx" />
     <Content Include="Pages\RegularPages\registration.aspx" />
-    <Content Include="Pages\RegularPages\update\update-country-new.aspx" />
+    <Content Include="Pages\RegularPages\update\update-branch.aspx" />
     <Content Include="Pages\RegularPages\update\update-country.aspx" />
     <Content Include="Pages\RegularPages\WebForm1.aspx" />
+    <Content Include="Scripts\update-branch.js" />
     <Content Include="Scripts\login.js" />
     <Content Include="Scripts\registration.js" />
     <Content Include="Scripts\update-country.js" />
@@ -313,12 +314,12 @@
     <Compile Include="Pages\RegularPages\registration.aspx.designer.cs">
       <DependentUpon>registration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\RegularPages\update\update-country-new.aspx.cs">
-      <DependentUpon>update-country-new.aspx</DependentUpon>
+    <Compile Include="Pages\RegularPages\update\update-branch.aspx.cs">
+      <DependentUpon>update-branch.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\RegularPages\update\update-country-new.aspx.designer.cs">
-      <DependentUpon>update-country-new.aspx</DependentUpon>
+    <Compile Include="Pages\RegularPages\update\update-branch.aspx.designer.cs">
+      <DependentUpon>update-branch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegularPages\update\update-country.aspx.cs">
       <DependentUpon>update-country.aspx</DependentUpon>

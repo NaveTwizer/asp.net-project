@@ -11,7 +11,7 @@ namespace Nave_Project2.Pages.RegularPages.update
 {
 
 
-    public partial class update_country_new
+    public partial class update_branch
     {
 
         /// <summary>

@@ -33,10 +33,11 @@
                     <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/users.aspx" Text="משתמשים" runat="server" />
                     <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/countries.aspx" Text="מדינות" runat="server" />
                     <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/manufactures.aspx" Text="יצרנים" runat="server" />
-
                     <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/suppliers.aspx" Text="ספקים" runat="server" />
                     <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/products.aspx" Text="מוצרים" runat="server" />
                     <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/workers.aspx" Text="עובדים" runat="server" />
+                    <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/Branches.aspx" Text="סניפים" runat="server" />
+                    <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/sales.aspx" Text="מכירות" runat="server" />
                     <asp:HyperLink NavigateUrl="~/Pages/RegularPages/Data/statistics.aspx" Text="סטטיסטיקה" runat="server" />
                 </div>
             </li>
