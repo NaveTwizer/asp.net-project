@@ -7,4 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>סניפים</h1>
     <%ListBranches(); %>
+    <p style="font-size:40px;">לעדכון סניפים, 
+        <a href="../update/update-branch.aspx" target="_blank">לחץ כאן</a>
+    </p>
 </asp:Content>

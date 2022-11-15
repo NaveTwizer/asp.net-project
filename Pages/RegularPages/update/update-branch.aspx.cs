@@ -6,26 +6,17 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.OleDb;
+using static Nave_Project2.Pages.MasterPages.Database; // CUSTOM CLASS
 
 namespace Nave_Project2.Pages.RegularPages.update
 {
     public partial class update_branch : System.Web.UI.Page
     {
-        private string GetConnectionString()
+        private void Alert(string message)
         {
-            //return @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\Nave_Project2\Nave_Project2\App_Data\Naves_Project_Ina_final.mdb;Persist Security Info=True";
-            return @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\Naves_Project_Ina_final.mdb;Persist Security Info=True";
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", $"alert('{message}')", true);
         }
-        private DataSet GetDataSet(string query)
-        {
-            DataSet ds = new DataSet();
-            OleDbConnection conn = new OleDbConnection(GetConnectionString());
-            OleDbDataAdapter adapter = new OleDbDataAdapter(query, conn);
-            conn.Open();
-            adapter.Fill(ds);
-            conn.Close();
-            return ds;
-        }
+        
         private bool DoesExist(string name)
         {
             // name - branch name
@@ -55,18 +46,12 @@ namespace Nave_Project2.Pages.RegularPages.update
                 row["BranchesPhone"] = phone;
                 ds.Tables[0].Rows.Add(row);
 
-
-                OleDbConnection conn = new OleDbConnection(GetConnectionString());
-                OleDbDataAdapter adapter = new OleDbDataAdapter(sql, conn);
-                OleDbCommandBuilder builder = new OleDbCommandBuilder(adapter);
-                adapter.InsertCommand = builder.GetInsertCommand();
-                adapter.Update(ds);
-                adapter.Fill(ds);
-
+                SaveDatabase(sql, ds);
                 this.goodFeedback.InnerText = "הסניף נשמר בהצלחה!";
-            } catch
+            } catch(Exception ex)
             {
-                this.badFeedback.InnerText = "משהו השתבש";
+                this.badFeedback.InnerText = "משהו השתבש, בדוק שקוד הסניף אינו כפיל";
+                Alert(ex.Message);
             }
         }
 
@@ -79,24 +64,29 @@ namespace Nave_Project2.Pages.RegularPages.update
                 return;
             }
             string sql = "SELECT * FROM BranchesTable";
-            DataSet ds = GetDataSet(sql);
+            try
+            {
+                DataSet ds = GetDataSet(sql);
 
-            string where = $"BranchesName='{name}'";
-            DataRow row = ds.Tables[0].Select(where).FirstOrDefault();
+                string where = $"BranchesName='{name}'";
+                DataRow row = ds.Tables[0].Select(where).FirstOrDefault();
 
-            // update
-            row["BranchesCode"] = code;
-            row["BranchesName"] = name;
-            row["BranchesAddress"] = address;
-            row["BranchesPhone"] = phone;
+                // update
+                row["BranchesCode"] = code;
+                row["BranchesName"] = name;
+                row["BranchesAddress"] = address;
+                row["BranchesPhone"] = phone;
 
-            // save
-            OleDbConnection conn = new OleDbConnection(GetConnectionString());
-            OleDbDataAdapter adapter = new OleDbDataAdapter(sql, conn);
-            OleDbCommandBuilder builder = new OleDbCommandBuilder(adapter);
-            adapter.UpdateCommand = builder.GetUpdateCommand();
-            adapter.Update(ds);
-            this.goodFeedback.InnerText = "הנתונים נשמרו בהצלחה!";
+                // save
+                SaveDatabase(sql, ds);
+
+                // output
+                this.goodFeedback.InnerText = "הנתונים נשמרו בהצלחה!";
+            } catch(Exception e)
+            {
+                this.badFeedback.InnerText = "משהו השתבש";
+                Alert(e.Message);
+            }
         }
 
         // DELETE
@@ -108,34 +98,36 @@ namespace Nave_Project2.Pages.RegularPages.update
                 return;
             }
             string query = "SELECT * FROM BranchesTable";
-            DataSet ds = GetDataSet(query);
-            string where = $"BranchesName='{name}'";
-            DataRow[] row = ds.Tables[0].Select(where);
-            for (int i = 0; i < row.Length; i++)
+            try
             {
-                row[i].Delete();
+                DataSet ds = GetDataSet(query);
+                string where = $"BranchesName='{name}'";
+                DataRow[] row = ds.Tables[0].Select(where);
+
+                // delete
+                for (int i = 0; i < row.Length; i++)
+                {
+                    row[i].Delete();
+                }
+
+                // save
+                SaveDatabase(query, ds);
+                this.goodFeedback.InnerText = "הסניף נמחק בהצלחה!";
+            } catch(Exception ex)
+            {
+                this.badFeedback.InnerText = "משהו השתבש";
+                Alert(ex.Message);
             }
-            OleDbConnection conn = new OleDbConnection(GetConnectionString());
-            OleDbDataAdapter adapter = new OleDbDataAdapter(query, conn);
-            OleDbCommandBuilder builder = new OleDbCommandBuilder(adapter);
-            adapter.DeleteCommand = builder.GetDeleteCommand();
-            adapter.Update(ds);
-            this.goodFeedback.InnerText = "הסניף נמחק בהצלחה!";
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*
-            DataSet ds = GetDataSet("SELECT * FROM BranchesTable");
-            string str = "";
-            foreach (DataRow r in ds.Tables[0].Rows)
-            {
-                str += r["BranchesName"];
-            }
-            this.goodFeedback.InnerText = str; */
+
         }
 
         protected void Create_Button_Click(object sender, EventArgs e)
         {
+            this.badFeedback.InnerText = "";
+            this.goodFeedback.InnerText = "";
             if (Request.ContentLength > 0)
             {
                 string code = Request.Form["branchCode"];
@@ -148,6 +140,8 @@ namespace Nave_Project2.Pages.RegularPages.update
 
         protected void Delete_Button_Click(object sender, EventArgs e)
         {
+            this.badFeedback.InnerText = "";
+            this.goodFeedback.InnerText = "";
             if (Request.ContentLength > 0)
             {
                 string code = Request.Form["branchCode"];
@@ -160,6 +154,8 @@ namespace Nave_Project2.Pages.RegularPages.update
 
         protected void Update_Button_Click(object sender, EventArgs e)
         {
+            this.badFeedback.InnerText = "";
+            this.goodFeedback.InnerText = "";
             if (Request.ContentLength > 0)
             {
                 string code = Request.Form["branchCode"];

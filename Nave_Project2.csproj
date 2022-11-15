@@ -81,7 +81,6 @@
     <Content Include="Pages\RegularPages\Add\validation\add-product.js" />
     <Content Include="Pages\RegularPages\Add\validation\add-sale.js" />
     <Content Include="Pages\RegularPages\AdminHomePage.aspx" />
-    <Content Include="Pages\RegularPages\AdminTest.aspx" />
     <Content Include="Pages\RegularPages\data-pages\about-our-founders.html" />
     <Content Include="Pages\RegularPages\data-pages\about-our-manufactures.html" />
     <Content Include="Pages\RegularPages\data-pages\about-our-products.html" />
@@ -125,6 +124,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\MasterPages\Database.cs" />
     <Compile Include="Pages\MasterPages\MasterPage3.Master.cs">
       <DependentUpon>MasterPage3.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -173,13 +173,6 @@
     </Compile>
     <Compile Include="Pages\RegularPages\AdminHomePage.aspx.designer.cs">
       <DependentUpon>AdminHomePage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\RegularPages\AdminTest.aspx.cs">
-      <DependentUpon>AdminTest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\RegularPages\AdminTest.aspx.designer.cs">
-      <DependentUpon>AdminTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegularPages\Data\Branches.aspx.cs">
       <DependentUpon>Branches.aspx</DependentUpon>

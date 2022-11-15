@@ -6,30 +6,15 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.OleDb;
 using System.Data;
-
+using static Nave_Project2.Pages.MasterPages.Database; // CUSTOM CLASS
 
 namespace Nave_Project2.Pages.RegularPages.DataTables
 {
     public partial class Products : System.Web.UI.Page
     {
-        public string GetConnectionString()
-        {
-            //return @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\Nave_Project2\Nave_Project2\App_Data\Naves_Project_Ina_final.mdb;Persist Security Info=True";
-            return @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\Naves_Project_Ina_final.mdb;Persist Security Info=True";
-        }
         protected void Page_Load(object sender, EventArgs e)
         {
-            //ListOfProducts();
-        }
-        public DataSet GetDataSet(string query)
-        {
-            DataSet ds = new DataSet();
-            OleDbConnection conn = new OleDbConnection(GetConnectionString());
-            OleDbDataAdapter adapter = new OleDbDataAdapter(query, conn);
-            conn.Open();
-            adapter.Fill(ds);
-            conn.Close();
-            return ds;
+
         }
         public string ParseRow(DataRow r, string att)
         {

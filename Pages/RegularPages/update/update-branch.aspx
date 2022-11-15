@@ -16,7 +16,7 @@
             width:100%;
             height:40px;
         }
-        input[type="text"], input[type="number"], input[type="tel"] {
+        input[type="text"], input[type="number"], input[type="tel"], select {
             font-size:30px;
             transition:.5s;
             background-color:cyan;
@@ -36,12 +36,15 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="fullscreen">
-        <h1 class="title">עדכון מדינה</h1>
+        <h1 class="title">עדכון סניפים</h1>
         <div class="form-container">
-            <form runat="server" method="post" action="" onsubmit="return isValid()">
+            <form runat="server" method="post" action="" onsubmit="return isValid()" id="form1">
                 <div>
-                    <label for="countryName">שם סניף לעדכון</label>
+                    <label>שם סניף לעדכון</label>
                     <input type="text" id="branchName" name="branchName" />
+                    <!--<select id="branchName" name="branchName" form="form1" runat="server">
+
+                    </select>-->
                     <div id="branchNameError" class="errors"></div>
                 </div>
 

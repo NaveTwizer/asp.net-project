@@ -19,4 +19,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>מדינות</h1>
     <%ListCountries(); %>
+    <p style="font-size:40px">
+        לעדכון מדינות,
+        <a href="../update/update-country.aspx">לחץ כאן</a>
+    </p>
 </asp:Content>

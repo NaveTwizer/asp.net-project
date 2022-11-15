@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.OleDb;
-
+using static Nave_Project2.Pages.MasterPages.Database; // CUSTOM CLASS
 
 namespace Nave_Project2.Pages.RegularPages.update
 {
@@ -19,22 +19,6 @@ namespace Nave_Project2.Pages.RegularPages.update
         protected void Page_Load(object sender, EventArgs e)
         {
             
-        }
-
-        private string GetConnectionString()
-        {
-            //return @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\Nave_Project2\Nave_Project2\App_Data\Naves_Project_Ina_final.mdb;Persist Security Info=True";
-            return @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\Naves_Project_Ina_final.mdb;Persist Security Info=True";
-        }
-        private DataSet GetDataSet(string query)
-        {
-            DataSet ds = new DataSet();
-            OleDbConnection conn = new OleDbConnection(GetConnectionString());
-            OleDbDataAdapter adapter = new OleDbDataAdapter(query, conn);
-            conn.Open();
-            adapter.Fill(ds);
-            conn.Close();
-            return ds;
         }
         private bool DoesExist(string Country)
         {
@@ -51,21 +35,22 @@ namespace Nave_Project2.Pages.RegularPages.update
                 return;
             }
             string sql = "SELECT * FROM CountriesTable";
-            DataSet ds = GetDataSet(sql);
+            try
+            {
+                DataSet ds = GetDataSet(sql);
 
-            DataRow row = ds.Tables[0].NewRow();
-            row["CountryName"] = country;
-            row["BranchesNum"] = branchesNum;
-            ds.Tables[0].Rows.Add(row);
+                DataRow row = ds.Tables[0].NewRow();
+                row["CountryName"] = country;
+                row["BranchesNum"] = branchesNum;
+                ds.Tables[0].Rows.Add(row);
 
-
-            OleDbConnection conn = new OleDbConnection(GetConnectionString());
-            OleDbDataAdapter adapter = new OleDbDataAdapter(sql, conn);
-            OleDbCommandBuilder builder = new OleDbCommandBuilder(adapter);
-            adapter.InsertCommand = builder.GetInsertCommand();
-            adapter.Update(ds);
-            adapter.Fill(ds);
-            this.goodFeedback.InnerText = "המדינה נשמרה בהצלחה!";
+                SaveDatabase(sql, ds);
+                this.goodFeedback.InnerText = "המדינה נשמרה בהצלחה!";
+            } catch(Exception e)
+            {
+                this.badFeedback.InnerText = "משהו השתבש";
+                Alert(e.Message);
+            }
         }
 
 
@@ -79,21 +64,24 @@ namespace Nave_Project2.Pages.RegularPages.update
                 return;
             }
             string sql = "SELECT * FROM CountriesTable";
-            DataSet ds = GetDataSet(sql);
+            try
+            {
+                DataSet ds = GetDataSet(sql);
 
-            string where = $"CountryName='{country}'";
-            DataRow row = ds.Tables[0].Select(where).FirstOrDefault();
+                string where = $"CountryName='{country}'";
+                DataRow row = ds.Tables[0].Select(where).FirstOrDefault();
 
-            row["CountryName"] = country;
-            row["BranchesNum"] = branchesNum;
+                row["CountryName"] = country;
+                row["BranchesNum"] = branchesNum;
 
 
-            OleDbConnection conn = new OleDbConnection(GetConnectionString());
-            OleDbDataAdapter adapter = new OleDbDataAdapter(sql, conn);
-            OleDbCommandBuilder builder = new OleDbCommandBuilder(adapter);
-            adapter.UpdateCommand = builder.GetUpdateCommand();
-            adapter.Update(ds);
-            this.goodFeedback.InnerText = "הנתונים נשמרו בהצלחה!";
+                SaveDatabase(sql, ds);
+                this.goodFeedback.InnerText = "הנתונים נשמרו בהצלחה!";
+            } catch(Exception e)
+            {
+                this.badFeedback.InnerText = "משהו השתבש";
+                Alert(e.Message);
+            }
         }
 
         // DELETE EVENT
@@ -106,19 +94,22 @@ namespace Nave_Project2.Pages.RegularPages.update
                 return;
             }
             string query = "SELECT * FROM CountriesTable";
-            DataSet ds = GetDataSet(query);
-            string where = $"CountryName='{country}'";
-            DataRow[] row = ds.Tables[0].Select(where);
-            for (int i = 0; i < row.Length; i++ )
+            try
             {
-                row[i].Delete();
+                DataSet ds = GetDataSet(query);
+                string where = $"CountryName='{country}'";
+                DataRow[] row = ds.Tables[0].Select(where);
+                for (int i = 0; i < row.Length; i++)
+                {
+                    row[i].Delete();
+                }
+                SaveDatabase(query, ds);
+                this.goodFeedback.InnerText = "המדינה נמחקה בהצלחה!";
+            } catch(Exception e)
+            {
+                this.badFeedback.InnerText = "משהו השתבש";
+                Alert(e.Message);
             }
-            OleDbConnection conn = new OleDbConnection(GetConnectionString());
-            OleDbDataAdapter adapter = new OleDbDataAdapter(query, conn);
-            OleDbCommandBuilder builder = new OleDbCommandBuilder(adapter);
-            adapter.DeleteCommand = builder.GetDeleteCommand();
-            adapter.Update(ds);
-            this.goodFeedback.InnerText = "המדינה נמחקה בהצלחה!";
         }
         protected void Update_Button_Click(object sender, EventArgs e)
         {
@@ -144,7 +135,6 @@ namespace Nave_Project2.Pages.RegularPages.update
             this.badFeedback.InnerText = "";
             this.goodFeedback.InnerText = "";
             string country = Request.Form["countryName"];
-            string num = Request.Form["branchesNum"];
 
             Delete(country);
         }
