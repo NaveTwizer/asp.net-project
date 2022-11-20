@@ -2,37 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../../Styles/dropdown.css" rel="stylesheet" />
     <link href="../../../Styles/NavbarStyle1.css" rel="stylesheet" />
-    <style type="text/css">
-        form {
-            position:absolute;
-            top:50%;
-            left:50%;
-            transform:translate(-50%, -50%);
-            border:1px solid black;
-            padding:10px;
-            font-size:25px;
-        }
-        input {
-            width:100%;
-            height:40px;
-        }
-        input[type="text"], input[type="number"] {
-            font-size:30px;
-            transition:.5s;
-            background-color:cyan;
-        }
-        input[type="text"]:hover, input[type="number"]:hover {
-            background-color:darkcyan;
-        }
-        .errors {
-            color:red;
-            font-size:20px;
-        }
-        #goodFeedback {
-            color:blue;
-            font-size:20px;
-        }
-    </style>
+    <link href="../../../Styles/update-pages-style.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>עדכון מדינה</h1>

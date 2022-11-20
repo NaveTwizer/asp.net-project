@@ -14,11 +14,35 @@
             border:1px solid black;
             padding:4px;
         }
+        input[type="text"] {
+            width:400px;
+            height:40px;
+            font-size:25px;
+        }
+        label {
+            font-size:20px;
+        }
+        .button {
+            width:150px;
+            height:40px;
+            font-size:25px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>מדינות</h1>
-    <%ListCountries(); %>
+    <div runat="server" id="TableDiv"></div>
+    <form runat="server">
+        <label>הקלד חיפוש</label>
+        <input type="text" id="searchQuery" name="searchQuery" />
+        <label>חפש לפי</label>
+        <select id="search" name="search">
+            <option value="country">שם מדינה</option>
+            <option value="branchesNum">מספר סניפים</option>
+        </select>
+        <div></div>
+        <asp:Button ID="Search" Text="חפש" runat="server" CssClass="button"/>
+    </form>
     <p style="font-size:40px">
         לעדכון מדינות,
         <a href="../update/update-country.aspx">לחץ כאן</a>

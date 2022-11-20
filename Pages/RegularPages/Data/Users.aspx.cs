@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.OleDb;
 using System.Data;
-using static Nave_Project2.Pages.MasterPages.Database; // CUSTOM CLASS
+using static Nave_Project2.utils.Database; // CUSTOM CLASS
 
 namespace Nave_Project2.Pages.RegularPages.Data
 {

@@ -13,5 +13,15 @@ namespace Nave_Project2.Pages.RegularPages.Data
         {
 
         }
+        private void Alert(string message)
+        {
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", $"alert('{message}')", true);
+        }
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            // button1 on click event
+            Alert("First alert"); // this does show up on the screen
+            Alert("Second alert"); // this does not show up
+        }
     }
 }

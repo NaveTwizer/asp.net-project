@@ -23,6 +23,8 @@
                 <br />
                 <input type="submit" value="היכנס" />
                 <input type="reset" value="נקה" />
+                <div id="BadFeedback" runat="server" style="color:red;"></div>
+                <div id="GoodFeedback" runat="server" style="color:green;"></div>
             </form>
         </div>
     </div>

@@ -109,11 +109,13 @@
     <Content Include="Pages\RegularPages\registration.aspx" />
     <Content Include="Pages\RegularPages\update\update-branch.aspx" />
     <Content Include="Pages\RegularPages\update\update-country.aspx" />
+    <Content Include="Pages\RegularPages\update\update-manufactor.aspx" />
     <Content Include="Pages\RegularPages\WebForm1.aspx" />
     <Content Include="Scripts\update-branch.js" />
     <Content Include="Scripts\login.js" />
     <Content Include="Scripts\registration.js" />
     <Content Include="Scripts\update-country.js" />
+    <Content Include="Scripts\update-manufactor.js" />
     <Content Include="Styles\add-product.css" />
     <Content Include="Styles\DataFilesStyle.css" />
     <Content Include="Styles\dropdown.css" />
@@ -121,10 +123,18 @@
     <Content Include="Styles\NavbarStyle1.css" />
     <Content Include="Styles\register.css" />
     <Content Include="Styles\login.css" />
+    <Content Include="Styles\update-pages-style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\MasterPages\Database.cs" />
+    <Compile Include="Pages\RegularPages\update\update-manufactor.aspx.cs">
+      <DependentUpon>update-manufactor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\update\update-manufactor.aspx.designer.cs">
+      <DependentUpon>update-manufactor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="utils\Database.cs" />
     <Compile Include="Pages\MasterPages\MasterPage3.Master.cs">
       <DependentUpon>MasterPage3.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

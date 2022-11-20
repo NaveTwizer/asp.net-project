@@ -4,9 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Data;
 using System.Data.OleDb;
+using System.Security.Cryptography;
+using System.Text;
 
-
-namespace Nave_Project2.Pages.MasterPages
+namespace Nave_Project2.utils
 {
     public class Database
     {
@@ -14,7 +15,7 @@ namespace Nave_Project2.Pages.MasterPages
          * GetConnectionString() - מחזירה מחרוזת התחברות לקובץ אקסס
          * GetDataSet() -  לפי השאילתה DataSet מחזיר עצם 
          * SaveDatabase() - שומר שינויים במסד נתונים
-         * 
+         * EncryptMD5() - MD5 מצפין טקסט, הצפנת 
          * 
          */
 
@@ -44,6 +45,26 @@ namespace Nave_Project2.Pages.MasterPages
             adapter.InsertCommand = builder.GetInsertCommand();
             adapter.Update(ds);
             adapter.Fill(ds);
+        }
+        public static string EncryptMD5(string text)
+        {
+            MD5 md5 = new MD5CryptoServiceProvider();
+
+            //compute hash from the bytes of text  
+            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(text));
+
+            //get hash result after compute it  
+            byte[] result = md5.Hash;
+
+            StringBuilder strBuilder = new StringBuilder();
+            for (int i = 0; i < result.Length; i++)
+            {
+                //change it into 2 hexadecimal digits  
+                //for each byte  
+                strBuilder.Append(result[i].ToString("x2"));
+            }
+
+            return strBuilder.ToString();
         }
     }
 }
