@@ -16,6 +16,11 @@ namespace Nave_Project2.Pages.RegularPages
         {
             ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", $"alert('{message}')", true);
         }
+        private string GetTime()
+        {
+            DateTime now = new DateTime();
+            return $"{now.Day}-{now.Month}-{now.Year}_{now.Hour}-{now.Minute}-{now.Second}.txt";
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             this.GoodFeedback.InnerText = "";
@@ -33,10 +38,19 @@ namespace Nave_Project2.Pages.RegularPages
                 if (!IsLoggedIn)
                 {
                     this.BadFeedback.InnerText = "המשתמש לא נמצא";
+                    return;
+                }
+                if (username == "admin" && pswd == "admin")
+                {
+                    Session["username"] = "admin";
+                    Response.Redirect("AdminHomePage.aspx");
+                    Response.End();
                 }
                 else
                 {
-                    this.GoodFeedback.InnerText = "ברוך הבא!";
+                    Session["username"] = username;
+                    Response.Redirect("LoggedHomePage.aspx");
+                    Response.End();
                 }
             }
         }

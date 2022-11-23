@@ -11,7 +11,11 @@ namespace Nave_Project2.Pages.MasterPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["username"] == null)
+            {
+                Response.Redirect("~/Pages/RegularPages/403.aspx");
+                Response.End();
+            }
         }
     }
 }

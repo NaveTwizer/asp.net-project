@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Nave_Project2.Pages.RegularPages
 {
-    public partial class HomePage : System.Web.UI.Page
+    public partial class _403_v2 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["username"] = null;
+            //Response.AppendHeader("Refresh", "10;url=HomePage.aspx");
         }
     }
 }

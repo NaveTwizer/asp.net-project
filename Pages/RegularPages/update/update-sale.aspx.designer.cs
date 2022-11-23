@@ -7,20 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Nave_Project2.Pages.RegularPages.Data
+namespace Nave_Project2.Pages.RegularPages.update
 {
 
 
-    public partial class suppliers
+    public partial class update_sale
     {
 
         /// <summary>
-        /// TableDiv control.
+        /// Create_Button control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TableDiv;
+        protected global::System.Web.UI.WebControls.Button Create_Button;
+
+        /// <summary>
+        /// Delete_Button control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Delete_Button;
     }
 }

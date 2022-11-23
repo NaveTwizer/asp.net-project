@@ -67,7 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Global.asax" />
     <Content Include="images\add-new-icon.png" />
+    <Content Include="Pages\RegularPages\403.aspx" />
     <Content Include="Pages\RegularPages\Add\add-branch.aspx" />
     <Content Include="Pages\RegularPages\Add\add-country.aspx" />
     <Content Include="Pages\RegularPages\Add\add-manufactor.aspx" />
@@ -110,12 +112,15 @@
     <Content Include="Pages\RegularPages\update\update-branch.aspx" />
     <Content Include="Pages\RegularPages\update\update-country.aspx" />
     <Content Include="Pages\RegularPages\update\update-manufactor.aspx" />
+    <Content Include="Pages\RegularPages\update\update-product.aspx" />
+    <Content Include="Pages\RegularPages\update\update-sale.aspx" />
     <Content Include="Pages\RegularPages\WebForm1.aspx" />
     <Content Include="Scripts\update-branch.js" />
     <Content Include="Scripts\login.js" />
     <Content Include="Scripts\registration.js" />
     <Content Include="Scripts\update-country.js" />
     <Content Include="Scripts\update-manufactor.js" />
+    <Content Include="Styles\403.css" />
     <Content Include="Styles\add-product.css" />
     <Content Include="Styles\DataFilesStyle.css" />
     <Content Include="Styles\dropdown.css" />
@@ -127,12 +132,36 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\403.aspx.cs">
+      <DependentUpon>403.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\403.aspx.designer.cs">
+      <DependentUpon>403.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\RegularPages\update\update-manufactor.aspx.cs">
       <DependentUpon>update-manufactor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\RegularPages\update\update-manufactor.aspx.designer.cs">
       <DependentUpon>update-manufactor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\update\update-product.aspx.cs">
+      <DependentUpon>update-product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\update\update-product.aspx.designer.cs">
+      <DependentUpon>update-product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\update\update-sale.aspx.cs">
+      <DependentUpon>update-sale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\update\update-sale.aspx.designer.cs">
+      <DependentUpon>update-sale.aspx</DependentUpon>
     </Compile>
     <Compile Include="utils\Database.cs" />
     <Compile Include="Pages\MasterPages\MasterPage3.Master.cs">
@@ -355,6 +384,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Requests\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

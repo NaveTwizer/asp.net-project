@@ -11,7 +11,8 @@ namespace Nave_Project2.Pages.RegularPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session.Abandon();
+            Response.Redirect("HomePage.aspx");
         }
     }
 }

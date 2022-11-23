@@ -11,17 +11,17 @@ namespace Nave_Project2.Pages.RegularPages.update
 {
 
 
-    public partial class update_manufactor
+    public partial class update_product
     {
 
         /// <summary>
-        /// BadFeedback control.
+        /// DepSelect control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl BadFeedback;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect DepSelect;
 
         /// <summary>
         /// GoodFeedback control.
@@ -31,6 +31,15 @@ namespace Nave_Project2.Pages.RegularPages.update
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl GoodFeedback;
+
+        /// <summary>
+        /// BadFeedback control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl BadFeedback;
 
         /// <summary>
         /// CreateButton control.

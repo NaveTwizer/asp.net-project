@@ -46,6 +46,12 @@ namespace Nave_Project2.utils
             adapter.Update(ds);
             adapter.Fill(ds);
         }
+        /*
+         private void Alert(string message)
+        {
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", $"alert('{message}')", true);
+        }
+         */
         public static string EncryptMD5(string text)
         {
             MD5 md5 = new MD5CryptoServiceProvider();

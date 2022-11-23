@@ -4,4 +4,5 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1 class="title">דף הבית</h1>
+    <div runat="server" id="WelcomeDiv"></div>
 </asp:Content>

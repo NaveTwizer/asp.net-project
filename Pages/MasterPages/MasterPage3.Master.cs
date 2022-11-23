@@ -11,7 +11,21 @@ namespace Nave_Project2.Pages.MasterPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrEmpty(Session["username"] as string))
+            {
+                Response.Redirect("~/Pages/RegularPages/403.aspx");
+                Response.End();
+            }
+            if (Session["username"].ToString() != "admin")
+            {
+                Response.Redirect("~/Pages/RegularPages/403.aspx");
+                Response.End();
+            }
+            /*if (Session["username"] == null)
+            {
+                Response.Redirect("~/Pages/RegularPages/403.aspx");
+                Response.End();
+            }*/
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Nave_Project2.Pages.RegularPages.Data
         {
             return $"<td>{r[att]}</td>";
         }
-        public void GetSuppliers(DataSet ds)
+        public string GetSuppliers(DataSet ds)
         {
             string all = "<table>";
             all += "<tr><td>שם ספק</td><td>קוד ספק</td><td>כתובת</td><td>טלפון</td><td>מייל</td></tr>";
@@ -32,16 +32,49 @@ namespace Nave_Project2.Pages.RegularPages.Data
                 all += "</tr>";
             }
             all += "</table>";
-            Response.Write(all);
+            return all;
         }
-        public void ListSuppliers()
+        public string ListSuppliers()
         {
             string query = "SELECT * FROM ProvidersTable\nORDER BY ProviderName ASC;";
-            GetSuppliers(GetDataSet(query));
+            return GetSuppliers(GetDataSet(query));
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack)
+            {
+                this.TableDiv.InnerHtml = search();
+            } else
+            {
+                this.TableDiv.InnerHtml = ListSuppliers();
+            }
+        }
+        private string search()
+        {
+            string SearchQuery = Request.Form["SearchQuery"];
+            string ElementToSearch = Request.Form["search"];
 
+            string query = "";
+            
+            switch (ElementToSearch)
+            {
+                case "code":
+                    query = $"SELECT * FROM ProvidersTable WHERE ProviderCode='{SearchQuery}'";
+                    break;
+                case "name":
+                    query = $"SELECT * FROM ProvidersTable WHERE ProviderName LIKE '{SearchQuery}%'";
+                    break;
+                case "address":
+                    query = $"SELECT * FROM ProvidersTable WHERE ProviderAdress LIKE '{SearchQuery}%'";
+                    break;
+                case "phone":
+                    query = $"SELECT * FROM ProvidersTable WHERE Phone='{SearchQuery}'";
+                    break;
+                case "mail":
+                    query = $"SELECT * FROM ProvidersTable WHERE Mail LIKE '{SearchQuery}%'";
+                    break;
+            }
+            return GetSuppliers(GetDataSet(query));
         }
     }
 }

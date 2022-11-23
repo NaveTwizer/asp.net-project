@@ -15,11 +15,13 @@
              <label for="country">שם מדינה</label>
              <input type="text" name="country" id="country" />
          </div>
+         <div runat="server" style="color:red;" id="BadFeedback"></div>
+         <div runat="server" style="color:green;" id="GoodFeedback"></div>
          <div>
              <input type="reset" value="נקה" />
-             <asp:Button ID="CreateButton" runat="server" Text="צור"  />
-             <asp:Button ID="UpdateButton" runat="server" Text="עדכן" />
-             <asp:Button ID="DeleteButton" runat="server" Text="מחק" />
+             <asp:Button ID="CreateButton" runat="server" Text="צור" OnClick="CreateButton_Click"  />
+             <asp:Button ID="UpdateButton" runat="server" Text="עדכן" OnClick="UpdateButton_Click" />
+             <asp:Button ID="DeleteButton" runat="server" Text="מחק" OnClick="DeleteButton_Click" />
          </div>
      </form>
 </asp:Content>
