@@ -44,5 +44,5 @@
             </form>
         </div>
     </div>
-    <script src="../../../Scripts/update-branch.js"></script>
+    <script src="../../../Scripts/update-validation/update-branch.js"></script>
 </asp:Content>

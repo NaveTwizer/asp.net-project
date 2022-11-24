@@ -45,4 +45,7 @@
         </select>
         <asp:Button Text="חפש" runat="server" CssClass="button"/>
     </form>
+    <p>לעדכון מכירות,
+        <asp:HyperLink runat="server" Text="לחץ כאן" NavigateUrl="~/pages/RegularPages/update/update-sale.aspx"/>
+    </p>
 </asp:Content>

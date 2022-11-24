@@ -15,6 +15,33 @@ namespace Nave_Project2.Pages.RegularPages.update
     {
 
         /// <summary>
+        /// BadFeedback control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl BadFeedback;
+
+        /// <summary>
+        /// GoodFeedback control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl GoodFeedback;
+
+        /// <summary>
+        /// Update_Button control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Update_Button;
+
+        /// <summary>
         /// Create_Button control.
         /// </summary>
         /// <remarks>

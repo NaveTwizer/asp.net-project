@@ -13,24 +13,24 @@ const branchAddressError = document.getElementById('branchAddressError');
 const branchPhoneError = document.getElementById('branchPhoneError');
 
 
-function isValid() {
+const isValid = () => {
     let b1 = isValidName();
     let b2 = isValidCode();
     let b3 = isValidAddress();
     let b4 = isValidPhone();
     return b1 && b2 && b3 && b4;
 }
-function isValidName() {
+
+const isValidName = () => {
     branchNameError.innerText = "";
     let name = branchName.value;
-
     if (name === "" || name === null) {
         branchNameError.innerText = "הכנס שם סניף";
         return false;
     }
     return true;
 }
-function isValidCode() {
+const isValidCode = () => {
     branchCodeError.innerText = "";
     let code = branchCode.value;
     if (code === "" || code === null) {
@@ -39,7 +39,7 @@ function isValidCode() {
     }
     return true;
 }
-function isValidAddress() {
+const isValidAddress = () => {
     branchAddressError.innerText = "";
     let addr = branchAddress.value;
     if (addr === "" || addr === null) {
@@ -48,12 +48,23 @@ function isValidAddress() {
     }
     return true;
 }
-function isValidPhone() {
+const isValidPhone = () => {
     branchPhoneError.innerText = "";
     let phone = branchPhone.value;
     if (phone === "" || phone === null) {
-        branchPhoneError.innerText = "הכנס מספר טלפון";
+        branchPhoneError.innerText = "הכנס טלפון סניף";
         return false;
+    }
+    if (phone.length < 7) {
+        branchPhoneError.innerText = "מספר טלפון קצר מידי";
+        return false;
+    }
+    let numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    for (var i = 0; i < phone.length; i++) {
+        if (!numbers.includes(phone.charAt(i))) {
+            branchPhoneError.innerText = "על המספר להכיל ספרות בלבד";
+            return false;
+        }
     }
     return true;
 }

@@ -25,6 +25,11 @@ namespace Nave_Project2.Pages.RegularPages.update
             string query = $"SELECT * FROM ProductorsTable WHERE ProductorName='{name}'";
             return GetDataSet(query).Tables[0].Rows.Count != 0;
         }
+        private bool DoesCountryExist(string name)
+        {
+            return GetDataSet($"SELECT * FROM CountriesTable WHERE CountryName='{name}'")
+                .Tables[0].Rows.Count != 0;
+        }
         protected void CreateButton_Click(object sender, EventArgs e)
         {
             this.BadFeedback.InnerText = "";
@@ -34,6 +39,11 @@ namespace Nave_Project2.Pages.RegularPages.update
             if (DoesExist(name))
             {
                 this.BadFeedback.InnerText = "יצרן עם שם זה כבר קיים!";
+                return;
+            }
+            if (!DoesCountryExist(country))
+            {
+                this.BadFeedback.InnerText = "מדינה זו אינה קיימת";
                 return;
             }
             string query = "SELECT * FROM ProductorsTable";
@@ -47,19 +57,72 @@ namespace Nave_Project2.Pages.RegularPages.update
 
             SaveDatabase(query, ds);
             this.GoodFeedback.InnerText = "הסניף נשמר בהצלחה!";
-            // ERROR
-            // You cannot add or change a record because a related
-            // record is required in table 'CountriesTable'.
         }
 
         protected void UpdateButton_Click(object sender, EventArgs e)
         {
+            this.BadFeedback.InnerText = "";
+            this.GoodFeedback.InnerText = "";
+            string name = Request.Form["name"];
+            string country = Request.Form["country"];
+            if (!DoesExist(name))
+            {
+                this.BadFeedback.InnerText = "יצרן זה אינו קיים";
+                return;
+            }
+            if (!DoesCountryExist(country))
+            {
+                this.BadFeedback.InnerText = "מדינה זו אינה קיימת";
+                return;
+            }
+            string sql = "SELECT * FROM ProductorsTable";
+            try
+            {
+                DataSet ds = GetDataSet(sql);
 
+                string where = $"ProductorName='{name}'";
+                DataRow row = ds.Tables[0].Select(where).FirstOrDefault();
+
+                row["ProductorName"] = name;
+                row["CountryName"] = country;
+
+
+                SaveDatabase(sql, ds);
+                this.GoodFeedback.InnerText = "הנתונים נשמרו בהצלחה!";
+            }
+            catch (Exception ex)
+            {
+                this.BadFeedback.InnerText = "משהו השתבש";
+            }
         }
 
         protected void DeleteButton_Click(object sender, EventArgs e)
         {
+            this.BadFeedback.InnerText = "";
+            this.GoodFeedback.InnerText = "";
+            string name = Request.Form["name"];
+            string country = Request.Form["country"];
+            if (!DoesExist(name))
+            {
+                this.BadFeedback.InnerText = "יצרן זה אינו קיים";
+                return;
+            }
+            string query = "SELECT * FROM ProductorsTable";
+            try
+            {
+                DataSet ds = GetDataSet(query);
+                string where = $"ProductorName='{name}'";
+                DataRow[] rows = ds.Tables[0].Select(where);
+                foreach (DataRow row in rows)
+                    row.Delete();
 
+                SaveDatabase(query, ds);
+                this.GoodFeedback.InnerText = "היצרן נמחק בהצלחה!";
+            }
+            catch (Exception ex)
+            {
+                this.BadFeedback.InnerText = "משהו השתבש";
+            }
         }
     }
 }

@@ -28,5 +28,5 @@
             </div>
         </form>
     </div>
-    <script src="../../../Scripts/update-country.js"></script>
+    <script src="../../../Scripts/update-validation/update-country.js"></script>
 </asp:Content>

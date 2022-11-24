@@ -70,6 +70,7 @@
     <Content Include="Global.asax" />
     <Content Include="images\add-new-icon.png" />
     <Content Include="Pages\RegularPages\403.aspx" />
+    <Content Include="Pages\RegularPages\404.aspx" />
     <Content Include="Pages\RegularPages\Add\add-branch.aspx" />
     <Content Include="Pages\RegularPages\Add\add-country.aspx" />
     <Content Include="Pages\RegularPages\Add\add-manufactor.aspx" />
@@ -108,6 +109,7 @@
     <Content Include="Pages\RegularPages\feedback.aspx" />
     <Content Include="Pages\RegularPages\HomePage.aspx" />
     <Content Include="Pages\RegularPages\login.aspx" />
+    <Content Include="Pages\RegularPages\my-profile.aspx" />
     <Content Include="Pages\RegularPages\registration.aspx" />
     <Content Include="Pages\RegularPages\update\update-branch.aspx" />
     <Content Include="Pages\RegularPages\update\update-country.aspx" />
@@ -115,11 +117,12 @@
     <Content Include="Pages\RegularPages\update\update-product.aspx" />
     <Content Include="Pages\RegularPages\update\update-sale.aspx" />
     <Content Include="Pages\RegularPages\WebForm1.aspx" />
-    <Content Include="Scripts\update-branch.js" />
     <Content Include="Scripts\login.js" />
     <Content Include="Scripts\registration.js" />
-    <Content Include="Scripts\update-country.js" />
+    <Content Include="Scripts\update-validation\update-country.js" />
     <Content Include="Scripts\update-manufactor.js" />
+    <Content Include="Scripts\update-validation\update-branch.js" />
+    <Content Include="Scripts\update-validation\update-manufactor.js" />
     <Content Include="Styles\403.css" />
     <Content Include="Styles\add-product.css" />
     <Content Include="Styles\DataFilesStyle.css" />
@@ -141,6 +144,20 @@
     </Compile>
     <Compile Include="Pages\RegularPages\403.aspx.designer.cs">
       <DependentUpon>403.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\my-profile.aspx.cs">
+      <DependentUpon>my-profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\my-profile.aspx.designer.cs">
+      <DependentUpon>my-profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegularPages\update\update-manufactor.aspx.cs">
       <DependentUpon>update-manufactor.aspx</DependentUpon>
