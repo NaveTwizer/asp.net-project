@@ -16,7 +16,7 @@
                         <td>
                             <input id="username" name="username" type="text" />
                         </td>
-                        <td class="error-td" id="username-error">
+                        <td class="error-td" id="UsernameError" runat="server">
 
                         </td>
                     </tr>
@@ -71,11 +71,11 @@
                         <td>
                             <label>
                                 זכר
-                                <input type="radio" id="male" name="gender" />
+                                <input type="radio" id="male" name="gender" value="male" />
                             </label>
                             <label>
                                 נקבה
-                                <input type="radio" id="female" name="gender" />
+                                <input type="radio" id="female" name="gender" value="female" />
                             </label>
                         </td>
                         <td class="error-td" id="gender-error">
@@ -89,6 +89,7 @@
                         <td>
                             <input type="email" placeholder="someone@gmail.com" id="email" name="email" />
                         </td>
+                        <td class="error-td" id="EmailError" runat="server"></td>
                     </tr>
                     <tr>
                         <td>
@@ -102,6 +103,12 @@
                         <td>
                             <input type="reset" value="נקה" />
                             <input type="submit" id="submit" name="submit" value="הירשם" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="BadFeedback" runat="server" style="color:red;"></div>
+                            <div id="GoodFeedback" runat="server" style="color:black;"></div>
                         </td>
                     </tr>
                     <tr>

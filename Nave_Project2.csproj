@@ -110,6 +110,7 @@
     <Content Include="Pages\RegularPages\HomePage.aspx" />
     <Content Include="Pages\RegularPages\login.aspx" />
     <Content Include="Pages\RegularPages\my-profile.aspx" />
+    <Content Include="Pages\RegularPages\order.aspx" />
     <Content Include="Pages\RegularPages\registration.aspx" />
     <Content Include="Pages\RegularPages\update\update-branch.aspx" />
     <Content Include="Pages\RegularPages\update\update-country.aspx" />
@@ -158,6 +159,13 @@
     </Compile>
     <Compile Include="Pages\RegularPages\my-profile.aspx.designer.cs">
       <DependentUpon>my-profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\order.aspx.cs">
+      <DependentUpon>order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\order.aspx.designer.cs">
+      <DependentUpon>order.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegularPages\update\update-manufactor.aspx.cs">
       <DependentUpon>update-manufactor.aspx</DependentUpon>

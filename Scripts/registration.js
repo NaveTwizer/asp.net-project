@@ -13,18 +13,18 @@ const emailElement = document.getElementById('email');
 
 
 // Error elements
-const usernameError = document.getElementById('username-error');
+const usernameError = document.getElementById('UsernameError');
 const passwordError = document.getElementById("password-error");
 const nameError = document.getElementById('name-error');
 const lastNameError = document.getElementById('lastname-error');
 const addressError = document.getElementById('address-error');
-const emailError = document.getElementById('email-error');
+const emailError = document.getElementById('EmailError');
 
 
 
 function isValid() {
     resetErrorMessages();
-    return (validUsername() && validPassword() && validName() && validLastName())
+    return (validUsername() && validPassword() && validName() && validLastName() && validEmail());
 }
 function validUsername() {
     usernameError.innerHTML = "";
