@@ -12,5 +12,6 @@
                     alt="הפרופיל שלי" height="70" width="70" title="הפרופיל שלי" />
             </a>
         </div>
+        <a href="order.aspx">להזמנת מוצרים אונליין</a>
     </div>
 </asp:Content>

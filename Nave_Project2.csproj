@@ -111,6 +111,7 @@
     <Content Include="Pages\RegularPages\login.aspx" />
     <Content Include="Pages\RegularPages\my-profile.aspx" />
     <Content Include="Pages\RegularPages\order.aspx" />
+    <Content Include="Pages\RegularPages\payment.aspx" />
     <Content Include="Pages\RegularPages\registration.aspx" />
     <Content Include="Pages\RegularPages\update\update-branch.aspx" />
     <Content Include="Pages\RegularPages\update\update-country.aspx" />
@@ -119,6 +120,7 @@
     <Content Include="Pages\RegularPages\update\update-sale.aspx" />
     <Content Include="Pages\RegularPages\WebForm1.aspx" />
     <Content Include="Scripts\login.js" />
+    <Content Include="Scripts\payment.js" />
     <Content Include="Scripts\registration.js" />
     <Content Include="Scripts\update-validation\update-country.js" />
     <Content Include="Scripts\update-manufactor.js" />
@@ -130,6 +132,7 @@
     <Content Include="Styles\dropdown.css" />
     <Content Include="Styles\feedback.css" />
     <Content Include="Styles\NavbarStyle1.css" />
+    <Content Include="Styles\payment.css" />
     <Content Include="Styles\register.css" />
     <Content Include="Styles\login.css" />
     <Content Include="Styles\update-pages-style.css" />
@@ -166,6 +169,13 @@
     </Compile>
     <Compile Include="Pages\RegularPages\order.aspx.designer.cs">
       <DependentUpon>order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\payment.aspx.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\payment.aspx.designer.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegularPages\update\update-manufactor.aspx.cs">
       <DependentUpon>update-manufactor.aspx</DependentUpon>

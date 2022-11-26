@@ -11,34 +11,34 @@ namespace Nave_Project2.Pages.RegularPages
 {
 
 
-    public partial class order
+    public partial class payment
     {
 
         /// <summary>
-        /// SelectProduct control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect SelectProduct;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// GoodFeedback control.
+        /// YearSelect control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl GoodFeedback;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect YearSelect;
 
         /// <summary>
-        /// BadFeedback control.
+        /// toPay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl BadFeedback;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl toPay;
     }
 }
