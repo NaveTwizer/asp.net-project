@@ -72,5 +72,35 @@ namespace Nave_Project2.utils
 
             return strBuilder.ToString();
         }
+
+        public static string Base64Encode(string plainText)
+        {
+            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
+            return System.Convert.ToBase64String(plainTextBytes);
+        }
+        public static string Base64Decode(string base64EncodedData)
+        {
+            var base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
+            return System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
+        }
+        public static void ExpireAllCookies()
+        {
+            if (HttpContext.Current != null)
+            {
+                int cookieCount = HttpContext.Current.Request.Cookies.Count;
+                for (var i = 0; i < cookieCount; i++)
+                {
+                    var cookie = HttpContext.Current.Request.Cookies[i];
+                    if (cookie != null)
+                    {
+                        var cookieName = cookie.Name;
+                        var expiredCookie = new HttpCookie(cookieName) { Expires = DateTime.Now.AddDays(-1) };
+                        HttpContext.Current.Response.Cookies.Add(expiredCookie);
+                    }
+                }
+
+                HttpContext.Current.Request.Cookies.Clear();
+            }
+        }
     }
 }

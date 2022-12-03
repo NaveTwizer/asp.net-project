@@ -51,7 +51,7 @@ namespace Nave_Project2.Pages.RegularPages
                 string address = Request.Form["address"];
                 string gender = Request.Form["gender"];
                 object bday = DateTime.Parse(Request.Form["birthday"]);
-                Alert(bday.ToString());
+                //Alert(bday.ToString());
 
                 string query = "SELECT * FROM Users";
                 DataSet ds = GetDataSet(query);

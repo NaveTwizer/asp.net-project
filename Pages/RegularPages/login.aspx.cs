@@ -54,5 +54,10 @@ namespace Nave_Project2.Pages.RegularPages
                 }
             }
         }
+
+        protected void MagicButton_Click(object sender, EventArgs e)
+        {
+            Session["username"] = "amogus";
+        }
     }
 }

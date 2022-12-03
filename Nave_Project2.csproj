@@ -110,8 +110,10 @@
     <Content Include="Pages\RegularPages\HomePage.aspx" />
     <Content Include="Pages\RegularPages\login.aspx" />
     <Content Include="Pages\RegularPages\my-profile.aspx" />
+    <Content Include="Pages\RegularPages\my-purchases.aspx" />
     <Content Include="Pages\RegularPages\order.aspx" />
     <Content Include="Pages\RegularPages\payment.aspx" />
+    <Content Include="Pages\RegularPages\purchase-complete.aspx" />
     <Content Include="Pages\RegularPages\registration.aspx" />
     <Content Include="Pages\RegularPages\update\update-branch.aspx" />
     <Content Include="Pages\RegularPages\update\update-country.aspx" />
@@ -131,6 +133,7 @@
     <Content Include="Styles\DataFilesStyle.css" />
     <Content Include="Styles\dropdown.css" />
     <Content Include="Styles\feedback.css" />
+    <Content Include="Styles\LoggedHomePageMenu.css" />
     <Content Include="Styles\NavbarStyle1.css" />
     <Content Include="Styles\payment.css" />
     <Content Include="Styles\register.css" />
@@ -163,6 +166,13 @@
     <Compile Include="Pages\RegularPages\my-profile.aspx.designer.cs">
       <DependentUpon>my-profile.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\RegularPages\my-purchases.aspx.cs">
+      <DependentUpon>my-purchases.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\my-purchases.aspx.designer.cs">
+      <DependentUpon>my-purchases.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\RegularPages\order.aspx.cs">
       <DependentUpon>order.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -176,6 +186,13 @@
     </Compile>
     <Compile Include="Pages\RegularPages\payment.aspx.designer.cs">
       <DependentUpon>payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegularPages\purchase-complete.aspx.cs">
+      <DependentUpon>purchase-complete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RegularPages\purchase-complete.aspx.designer.cs">
+      <DependentUpon>purchase-complete.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\RegularPages\update\update-manufactor.aspx.cs">
       <DependentUpon>update-manufactor.aspx</DependentUpon>

@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Nave_Project2.Pages.RegularPages.Data
+namespace Nave_Project2.Pages.RegularPages
 {
 
 
-    public partial class manufactures
+    public partial class my_purchases
     {
 
         /// <summary>
@@ -22,23 +22,5 @@ namespace Nave_Project2.Pages.RegularPages.Data
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl TableDiv;
-
-        /// <summary>
-        /// Search control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Search;
-
-        /// <summary>
-        /// Search2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Search2;
     }
 }

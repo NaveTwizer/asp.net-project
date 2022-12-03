@@ -22,7 +22,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>יצרנים</h1>
     <div runat="server" id="TableDiv"></div>
-    <form runat="server" action="" method="post">
+    <form runat="server" action="manufactures.aspx" method="post">
         <label>הקלד חיפוש</label>
         <input type="text" id="searchQuery" name="searchQuery" />
         <label>חפש לפי</label>
@@ -30,8 +30,13 @@
             <option value="name">שם יצרן</option>
             <option value="country">מדינת יצרן</option>
         </select>
-        <div></div>
-        <asp:Button ID="Search" Text="חפש" runat="server" CssClass="button"/>
+        <br />
+        <asp:Button ID="Search" Text="חפש" runat="server" CssClass="button" OnClick="Search_Click"/>
+        <div>
+            <label>חפש מוצרים לפי שם יצרן</label>
+            <input type="text" placeholder="שם יצרן" id="ManufactorName" name="ManufactorName" />
+            <asp:Button ID="Search2" Text="חפש" runat="server" CssClass="button" OnClick="Search2_Click" />
+        </div>
     </form>
     <p style="font-size:40px">
         לעדכון יצרנים,

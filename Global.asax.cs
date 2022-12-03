@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
+using static Nave_Project2.utils.Database;
 
 namespace Nave_Project2
 {
@@ -18,6 +19,7 @@ namespace Nave_Project2
         protected void Session_Start(object sender, EventArgs e)
         {
             Session["username"] = null;
+            ExpireAllCookies();
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
@@ -42,7 +44,13 @@ namespace Nave_Project2
 
         protected void Application_End(object sender, EventArgs e)
         {
+            try
+            {
+                Session.Abandon();
+            } catch
+            {
 
+            }
         }
     }
 }

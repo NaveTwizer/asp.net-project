@@ -47,5 +47,8 @@
         </select>
         <asp:Button ID="Search" Text="חפש" runat="server" CssClass="button"/>
         <asp:Button Text="הראה טבלה מלאה" runat="server" CssClass="button" OnClick="Unnamed_Click" />
+        <div>
+            <label>חשב סך מוצרים לפי יצרן</label>
+        </div>
     </form>
 </asp:Content>

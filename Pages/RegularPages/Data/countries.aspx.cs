@@ -9,12 +9,10 @@ using System.Data.OleDb;
 using System.Data.SqlClient;
 using static Nave_Project2.utils.Database; // CUSTOM CLASS
 
-
 namespace Nave_Project2.Pages.RegularPages.Data
 {
     public partial class countries : System.Web.UI.Page
     {
-        
         public string ParseRow(DataRow r, string att)
         {
             return $"<td>{r[att]}</td>";

@@ -35,7 +35,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>טופס הזמנה</h1>
-    <form action="" method="post" runat="server">
+    <form action="order.aspx" method="post" runat="server">
         <div>
             <label>המוצר אותו תרצה להזמין</label>
             <div>

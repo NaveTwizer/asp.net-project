@@ -58,6 +58,7 @@
                 <div>
                     <p id="toPay" runat="server"></p>
                 </div>
+                <div id="GoodFeedback" runat="server"></div>
                 <div>
                     <input type="submit" value="שלם" />
                 </div>

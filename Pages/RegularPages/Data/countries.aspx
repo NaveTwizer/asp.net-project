@@ -42,6 +42,9 @@
         </select>
         <div></div>
         <asp:Button ID="Search" Text="חפש" runat="server" CssClass="button"/>
+        <div id="calculate-div">
+
+        </div>
     </form>
     <p style="font-size:40px">
         לעדכון מדינות,

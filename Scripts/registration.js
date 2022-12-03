@@ -24,7 +24,7 @@ const emailError = document.getElementById('EmailError');
 
 function isValid() {
     resetErrorMessages();
-    return (validUsername() && validPassword() && validName() && validLastName() && validEmail());
+    return (validUsername() && validPassword() && validName() && validLastName() && validAddress() && validEmail());
 }
 function validUsername() {
     usernameError.innerHTML = "";
@@ -96,7 +96,7 @@ function validLastName() {
 function validAddress() {
     addressError.innerHTML = "";
     const address = addressElement.value;
-    if (address === "") {
+    if (address === "" || address === null) {
         addressError.innerHTML = "הזן כתובת";
         return false;
     }

@@ -32,6 +32,8 @@ namespace Nave_Project2.Pages.RegularPages
             // HANDLE POST REQUEST
             if (IsPostBack)
             {
+                //ExpireAllCookies();
+
                 string product = this.SelectProduct.Value;
                 int amount = int.Parse(Request.Form["amount"].ToString());
                 DataRow row = ds.Tables[0].Select($"ProductName='{product}'").FirstOrDefault();
@@ -52,10 +54,9 @@ namespace Nave_Project2.Pages.RegularPages
                 int PricePerSingle = int.Parse(row["Price"].ToString()); // מחיר מוצר ליחידה אחת
 
                 int PriceToPay = PricePerSingle * amount;
-                //this.GoodFeedback.InnerText = "סך התשלום:" + " " + PriceToPay.ToString() + "\n" + "מיד תועבר לדף התשלום";
-                //Response.AppendHeader("Refresh", $"10;url=payment.aspx?total={PriceToPay}");
-                Response.Redirect($"payment.aspx?total={PriceToPay}");
-                //this.GoodFeedback.InnerText = "שלחנו" + " " + amount.ToString() + " " + product + " " + "אל" + " " + address;
+                Session["product"] = Base64Encode(product);
+                Session["amount"] = amount.ToString();
+                Response.Redirect("payment.aspx");
             }
         }
     }
