@@ -1,0 +1,92 @@
+﻿<%@ Page Title="משוב" Language="C#" MasterPageFile="~/Master Pages/Master2.Master" AutoEventWireup="true" CodeBehind="feedback.aspx.cs" Inherits="Nave_Project2.Pages.feedbacl" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="/Styles/feedback.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            direction:rtl;
+            background-color:gray;
+        }
+        .border-1px-black {
+            border:1px solid black;
+            border-collapse:collapse;
+        }
+        .full-height {
+            height:100%;
+        }
+        .form {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            text-align:right;
+            padding:30px;
+        }
+        ._title {
+            text-align:center;
+            font-size:2rem;
+        }
+        label {
+            color:black;
+            font-size:30px;
+        }
+        .inputs {
+            border:1px solid black;
+            text-align:right;
+            width:100%;
+            padding:10px 0 10px 0;
+            text-align:center;
+            font-size:25px;
+            background-color:lightblue;
+        }
+        .errors {
+            color:red;
+        }
+        .buttons {
+            background-color:aqua;
+            width:100%;
+            padding:10px 0 10px 0;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container">
+        <h1 class="_title">טופס משוב</h1>
+        <form runat="server" method="post" action="feedback.aspx" class="border-1px-black form" onsubmit="return IsValid()">
+            <div>
+                <label>מה דעתך על האתר שלנו?</label>
+                <br />
+                <input id="opinion" name="opinion" class="inputs" />
+                <div id="opinionError" class="errors"></div>
+            </div>
+            <div>
+                <label>מה דעתך על הנגישות באתר?</label>
+                <br />
+                <input id="access" name="access" class="inputs" />
+                <div class="errors" id="accessError"></div>
+            </div>
+            <div>
+                <label>מה דעתך על איכות המוצרים שלנו?</label>
+                <br />
+                <input id="quality" name="quality" class="inputs" />
+                <div class="errors" id="qualityError"></div>
+            </div>
+            <div>
+                <label>מה דעתך על עיצוב האתר?</label>
+                <br />
+                <input id="design" name="design" class="inputs" />
+                <%--סך רכישות למשתמש--%>
+                <div class="errors" id="designError"></div>
+            </div>
+            <div>
+                <label>האם יש לך משהו נוסף לומר לנו?</label>
+                <br />
+                <textarea id="feedback" name="feedback" style="resize:none; width:100%;font-size:25px;" class="border-1px-black" rows="4"></textarea>
+            </div>
+            <div id="output" runat="server"></div>
+            <div>
+                <asp:Button runat="server" ID="SendButton" Text="שלח" OnClick="SendButton_Click" CssClass="buttons" />
+            </div>
+        </form>
+    </div>
+    <script src="../Scripts/feedback.js"></script>
+</asp:Content>

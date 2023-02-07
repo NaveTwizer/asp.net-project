@@ -1,0 +1,50 @@
+﻿.form-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    border-collapse: collapse;
+    padding: 15px;
+    border: 1px solid black;
+    width: 25%;
+    text-align:center;
+}
+
+.form-div label {
+    text-align: right;
+    font-size: 35px;
+}
+
+.form-div input[type="text"], .form-div input[type="password"] {
+    text-align: center;
+    width: 50%;
+    height: 30px;
+    transition: .3s;
+}
+
+.form-div input[type="text"]:focus, .form-div input[type="password"]:focus {
+    /*background-color:rgba(30,85,250,0.47);*/
+    background-color: cyan;
+    width: 70%;
+    border-radius: 5%;
+}
+
+.form-div input[type="submit"], .form-div input[type="reset"] {
+    transition: .5s;
+    width: 45%;
+    height: 50px;
+    background-color: aqua;
+}
+
+.form-div input[type="submit"]:hover, .form-div input[type="reset"]:hover {
+    cursor: pointer;
+    background-color: bisque;
+}
+
+.div-error {
+    color: red;
+    text-decoration: underline;
+    text-decoration-color: red;
+    font-size: 40px;
+}

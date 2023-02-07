@@ -1,0 +1,45 @@
+﻿body {
+    direction:rtl;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    display: inline-block;
+    text-align: center;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.AmountInputs {
+    text-align: center;
+    width: 40%;
+}
+
+.container {
+    text-align: right;
+}
+
+.header {
+    text-align: center;
+}
+
+.plus:hover, .minus:hover {
+    cursor: pointer;
+}
+.btn {
+    text-decoration: none;
+    text-align: center;
+    background-color: aqua;
+    border: 1px solid aqua;
+}
+
+.btn-large {
+    padding: 15px 40px 15px 40px;
+    font-size: 1rem;
+}

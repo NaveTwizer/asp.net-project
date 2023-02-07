@@ -1,0 +1,39 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    direction: rtl;
+    background-color: gray;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+.btn {
+    text-decoration: none;
+    text-align: center;
+    background-color: aqua;
+    border: 1px solid aqua;
+}
+
+.btn-large {
+    padding: 15px 40px 15px 40px;
+    font-size: 1rem;
+}
+.SearchButton {
+    padding:10px 15px 10px 15px;
+    font-size:1rem;
+}
+input {
+    padding:10px 0 10px 10px;
+    font-size:1rem;
+}

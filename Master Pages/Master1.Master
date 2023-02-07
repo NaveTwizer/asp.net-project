@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master1.master.cs" Inherits="Nave_Project2.Master_Pages.Master1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="/Styles/Navbar1_dropdown.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar-div">
+        <ul class="ul">
+            <li class="li">
+                <a href="/Pages/HomePage.aspx">בית</a>
+            </li>
+            <li class="li">
+                <a href="/Pages/login.aspx">התחבר</a>
+            </li>
+            <li class="li">
+                <a href="/Pages/registration.aspx">רישום</a>
+            </li>
+            <li class="li">
+                <a href="/Pages/logout.aspx">התנתק</a>
+            </li>
+             <li class="dropDown li" style="padding:0;margin:0;">
+                <a>דפי מידע</a>
+                <div class="dropDownContent">
+                    <a href="/Pages/information/about-our-founders.html">על היוצרים</a>
+                    <a href="/Pages/information/about-our-manufactures.html">היצרנים שלנו</a>
+                    <a href="/Pages/information/about-our-products.html">על המוצרים</a>
+                    <a href="/Pages/information/about-our-providers.html">על הספקים</a>
+                    <a href="/Pages/information/about-us.html">עלינו</a>
+                    <a href="/Pages/information/our-branches.html">הסניפים שלנו</a>
+                    <a href="/Pages/information/our-vision.html">חזון החברה</a>
+                    <a href="/Pages/information/work-with-us.html">עבדו איתנו</a>
+                    <a href="/Pages/information/our-pictures.html">התמונות שלנו</a>
+                    <a href="/Pages/information/FAQ.html">שאלות נפוצות</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Child content -->
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    
+</body>
+</html>

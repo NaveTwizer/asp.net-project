@@ -1,0 +1,93 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.upper-navbar {
+    height: 6vh;
+}
+
+.left-div {
+    float: left;
+    text-align: center;
+    font-size: 50px;
+    width: 29.88%;
+}
+
+.right-div {
+    width: 70%;
+    background-color: white;
+    height: 100vh;
+}
+
+.left-navbar {
+    box-shadow: 2px 2px 10px #ccc;
+}
+
+.links {
+    padding: 0px 10px 0px 10px;
+}
+
+    .links a {
+        text-decoration: none;
+        color: black;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+.right-title {
+    text-align: right;
+    color: #4fac9f;
+    font-size: 40px;
+}
+
+.right-content {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.choose-pfp-p {
+    font-size: 20px;
+}
+
+.account-info-div {
+    border: 1px solid black;
+    width: 80%;
+    text-align: right;
+}
+
+.account-info-h {
+    color: #565656;
+    font-size: 40px;
+}
+
+.account-info-labels {
+    font-size: 30px;
+}
+
+.account-info-inputs {
+    border: 1px solid gray;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 25px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.account-info-col {
+    padding-right: 40px;
+}
+
+.upper-navbar-ul li {
+    display: inline;
+}

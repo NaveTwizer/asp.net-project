@@ -1,0 +1,71 @@
+﻿body {
+    background-color: gray;
+    direction: rtl;
+}﻿
+/* 3 bars dropdown */
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown2 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown2-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown2-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown2-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown2:hover .dropdown2-content {
+    display: block;
+}
+
+.bars {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+.NewsDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid black;
+}
+
+.moving-headers {
+    display: inline;
+    float: right;
+    padding: 10px;
+    animation: move-rtl 10s linear infinite;
+}
+
+@keyframes move-rtl {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-600%);
+    }
+}

@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master3.master.cs" Inherits="Nave_Project2.Master_Pages.Master3" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Styles/Navbar1_dropdown.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar-div">
+        <ul class="ul">
+            <li class="li">
+                <a href="/Pages/Admin/home.aspx">דף הבית</a>
+            </li>
+            <li class="li">
+                <a href="/Pages/data/sales.aspx">רכישות</a>
+            </li>
+            <li class="dropDown li" style="padding:0;margin:0;">
+                <a>משתמשים</a>
+                <div class="dropDownContent">
+                    <a href="/Pages/data/users.aspx">רשימת משתמשים</a>
+                    <a href="/Pages/data/update/update-users.aspx">לעדכון משתמשים</a>
+                </div>
+            </li>
+            <li class="li">
+                <a href="/Pages/feedback.aspx">משוב</a>            
+            </li>
+            <li class="li">
+                <a href="/Pages/logout.aspx">התנתק</a>           
+            </li>
+            <li class="dropDown li" style="padding:0;margin:0;">
+                <a>כניסת מנהל</a>
+                <div class="dropDownContent">
+                    <a href="/Pages/data/users.aspx">משתמשים</a>
+                    <a href="/Pages/data/countries.aspx">מדינות</a>
+                    <a href="/Pages/data/manufacturers.aspx">יצרנים</a>
+                    <a href="/Pages/data/providers.aspx">ספקים</a>
+                    <a href="/Pages/data/products.aspx">מוצרים</a>
+                    <a href="/Pages/data/workers.aspx">עובדים</a>
+                    <a href="/Pages/data/branches.aspx">סניפים</a>
+                    <a href="/Pages/data/sales.aspx">מכירות</a>
+                    <a href="/Pages/admin/statistics.aspx">סטטיסטיקה</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--              CRINGE ALERT!!!!!!            -->
+    <%--<div id="ukraine" style="background-color:#005BBB; color:#FFD500;" class="cringe">
+        We Stand With Ukraine
+    </div>
+    <div id="gaydiv" style="background:linear-gradient(90deg, Red, Orange, Yellow, Green, Indigo, violet)"; class="cringe">
+        +We Stand With LGBTQIA2S
+    </div>
+    <div id="nigger" style="background-color:black; color:white;" class="cringe">
+        Black Lives Matter
+    </div>
+    <div id="iran" style="background:linear-gradient(90deg, Green, White, Red);" class="cringe">
+        Woman, Life, Freedom
+    </div>
+    <div id="climate" class="cringe" style="background-color:lightgreen; color:white;">
+        Climate Change Is Real
+    </div>
+    <div id="woman" class="cringe" style="background-color:lightpink;">
+        Woman Rights Are Human Rights
+    </div>
+    <div id="racism" class="cringe" style="background-color:blue;">
+        Stop Racism
+    </div>
+    <div id="megacringe" class="cringe mega" style="background-color:aqua;">
+        You Are Perfect The Way You Are
+    </div>
+    <div id="abortions" class="cringe" style="background-color:red;">
+        Abortion Is Not Killing
+    </div>--%>
+
+
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</body>
+</html>

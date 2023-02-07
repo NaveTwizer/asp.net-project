@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Master Pages/Master3.Master" AutoEventWireup="true" CodeBehind="AdminNested.master.cs" Inherits="Nave_Project2.Master_Pages.AdminNested" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .content {
+            text-align:center;
+            background-color:gray;
+            width: 98%;
+            height:100%;
+            background:url(/images/admin.jpg) no-repeat;
+            background-size:cover;
+        }
+        .content .WelcomeHeader {
+            color:white;
+        }
+        body {
+            margin: 0;
+            font-family: "Lato", sans-serif;
+            direction:rtl;
+        }
+        .sidebar {
+          margin: 0;
+          padding: 0;
+          width: 10%;
+          background-color: #f1f1f1;
+          position: fixed;
+          display:block;
+          height: 100%;
+          overflow: auto;
+          float:right;
+        }
+
+        .sidebar a {
+          display: block;
+          color: black;
+          padding: 16px;
+          text-decoration: none;
+        }
+
+        .sidebar a.active {
+          background-color: #04AA6D;
+          color: white;
+        }
+
+        .sidebar a:hover:not(.active) {
+          background-color: #555;
+          color: white;
+        }
+
+        div.content {
+          margin-left: 200px;
+          padding: 1px 16px;
+          height: 1000px;
+        }
+
+        @media screen and (max-width: 700px) {
+          .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+          }
+          .sidebar a {float: left;}
+          div.content {margin-left: 0;}
+        }
+
+        @media screen and (max-width: 400px) {
+          .sidebar a {
+            text-align: center;
+            float: none;
+          }
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="sidebar">
+        <a class="active" href="/Pages/profile/my-profile.aspx">הפרופיל שלי</a>
+        <a href="/Pages/data/users.aspx">משתמשים</a>
+        <a href="/Pages/data/workers.aspx">עובדים</a>
+        <a href="/Pages/admin/add-discounts.aspx">הוסף הנחות יומיות</a>
+        <a href="/Pages/admin/contact-all-users.aspx">שלח מייל לכל העובדים או המשתמשים</a>
+        <a href="/Pages/admin/statistics.aspx">סטטיסטיקה</a>
+    </div>
+
+    <div class="content">
+        <asp:ContentPlaceHolder runat="server" ID="head"></asp:ContentPlaceHolder>
+    </div>
+</asp:Content>
