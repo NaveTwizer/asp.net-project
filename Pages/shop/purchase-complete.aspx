@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         body {
+            direction:rtl;
             background-color:gray;
         }
         .div1 {

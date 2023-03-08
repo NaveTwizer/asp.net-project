@@ -23,7 +23,7 @@
   <div class="error__title">404</div>
   <div class="error__subtitle">הדף לא קיים</div>
   <div class="error__description">אנו מתנצלים, הדף שביקשת לא נמצא</div>
-  <button class="error__button error__button--active" onclick="location.href='HomePage.aspx'">קחו אותי לדף הבית</button>
+  <button class="error__button error__button--active" onclick="location.href='/Pages/HomePage.aspx'">קחו אותי לדף הבית</button>
 </div>
 
 <div class="astronaut">

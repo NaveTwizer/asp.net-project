@@ -11,13 +11,13 @@ using static Nave_Project2.Utils.Security;
 namespace Nave_Project2.Pages.data
 {
     public partial class products : System.Web.UI.Page
-    {
+    { // מחלקת דף המוצרים
         private string ParseRow(DataRow row, string attr)
         {
             return $"<td>{row[attr]}</td>";
         }
         private string GetProductsTable(DataSet ds)
-        {
+        { // מחזיר טבלת מוצרים כמחרוזת
             string table = "<table><tr><td>קוד מוצר</td><td>שם מוצר</td><td>מחלקה</td><td>יצרן</td><td>קוד ספק</td><td>תיאור</td><td>מחיר</td><td>כמות</td></tr>";
             string[] values = { "ProductCode", "ProductName", "DepName", "ProductorName", "ProviderCode", "ProductDesc", "Price", "Amount" };
             foreach (DataRow row in ds.Tables[0].Rows)
@@ -42,6 +42,7 @@ namespace Nave_Project2.Pages.data
 
         protected void SearchProductByName_Click(object sender, EventArgs e)
         {
+            // חפש מוצר לפי שם
             string product = Request.Form["product"];
             string query = $"SELECT * FROM ProductsTable WHERE ProductName='{product}'";
             DataSet ds = GetDataSet(query);

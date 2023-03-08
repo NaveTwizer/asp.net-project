@@ -13,11 +13,11 @@ namespace Nave_Project2.Pages.data
     public partial class manufacturers : System.Web.UI.Page
     {
         private string ParseRow(DataRow row, string attr)
-        {
+        { // td מחזיר תגית 
             return $"<td>{row[attr]}</td>";
         }
         private string GetManuTable(DataSet ds)
-        {
+        { // מחזיר טבלת יצרנים כמחרוזת
             string table = "<table><tr><td>שם יצרן</td><td>מדינה</td></tr>";
             foreach (DataRow row in ds.Tables[0].Rows)
             {
@@ -38,7 +38,7 @@ namespace Nave_Project2.Pages.data
         }
 
         protected void SearchManuByName_Click(object sender, EventArgs e)
-        {
+        { // חיפוש יצרן לפי שם
             string manu = Request.Form["manu"];
             string query = $"SELECT * FROM ProductorsTable WHERE ProductorName='{manu}'";
             this.TableDiv.InnerHtml = GetManuTable(GetDataSet(query));

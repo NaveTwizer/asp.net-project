@@ -9,7 +9,6 @@ namespace Nave_Project2.Components
     {
         public List<CartItem> Items { get; private set; }
 
-
         // Readonly properties can only be set in initialization or in a constructor
         public static readonly ShoppingCart MyShoppingCart;
 

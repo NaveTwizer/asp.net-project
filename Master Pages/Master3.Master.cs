@@ -11,7 +11,7 @@ namespace Nave_Project2.Master_Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 String _us = Session["username"].ToString();
             } catch(Exception)
@@ -29,7 +29,7 @@ namespace Nave_Project2.Master_Pages
             {
                 Response.Redirect("~/Pages/LoggedHomePage.aspx", true);
                 return;
-            }
+            }*/
         }
     }
 }

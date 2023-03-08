@@ -8,28 +8,41 @@
         https://www.mitgaisim.idf.il/%D7%9B%D7%AA%D7%91%D7%95%D7%AA/%D7%A8%D7%90%D7%A9%D7%99/%D7%98%D7%99%D7%A4%D7%99%D7%9D-%D7%90%D7%95%D7%A8%D7%97-%D7%97%D7%99%D7%99%D7%9D-%D7%95%D7%A1%D7%9C%D7%A0%D7%92/%D7%94%D7%9B%D7%9F-%D7%90%D7%AA-%D7%92%D7%95%D7%A4%D7%9A-%D7%9C%D7%99%D7%95%D7%9D-%D7%94%D7%A1%D7%99%D7%99%D7%A8%D7%95%D7%AA/#/
     --%>
     <div>
-        <h1 id="title" runat="server"></h1>
-        <div class="dropdown2">
-            <div class="dropbtn">
-                <%--<div class="bars bar1"></div>
-                <div class="bars bar2"></div>
-                <div class="bars bar3"></div>--%>
-                <img id="pfp" runat="server" height="80" width="80" style="border-radius:40px;" />
-            </div>
-            <div class="dropdown2-content">
-                <a href="/Pages/profiles/my.aspx">הפרופיל שלי</a>
-                <a href="/Pages/profiles/my-purchases.aspx">הרכישות שלי</a>
-                <a href="/Pages/profiles/update-profile.aspx">שינוי פרטים</a>
-                <a href="/Pages/shop/order.aspx">הזמן מוצרים</a>
+        <div style="margin-left:auto; margin-right:0;">
+            <br />
+            <h1 id="title" runat="server"></h1>
+            <div class="dropdown2">
+                <div class="dropbtn">
+                    <img id="pfp" runat="server" height="100" width="100" style="border-radius:40px;" />
+                </div>
+                <div class="dropdown2-content">
+                    <a href="/Pages/profile/my-profile">הפרופיל שלי</a>
+                    <a href="/Pages/shop/my-purchases.aspx">הרכישות שלי</a>
+                    <a href="/Pages/profile/update-profile.aspx">שינוי פרטים</a>
+                    <a href="/Pages/shop/order">הזמן מוצרים</a>
+                    <a href="/Pages/shop/Invoices/search-invoice.aspx">חפש קבלה</a>
+                    <a href="/Pages/auth/logout.aspx"">התנתק</a>
+                </div>
             </div>
         </div>
+
         <br /><br />
-        <h1 style="float:right; font-size:35px;">ההנחות של היום</h1>
-        <div class="NewsDiv">
-            <h1 class="moving-headers" id="discount1" runat="server"></h1>
-            <h1 class="moving-headers" id="discount2" runat="server"></h1>
-            <h1 class="moving-headers" id="discount3" runat="server"></h1>
+        <div>
+            <h2 class="moving-header">ברוכים הבאים לאתר הקניות הבא של ישראל</h2>
+            <center>
+                <div class="changing-images-div">
+                    <div id="img1" class="changing-images"></div>
+                    <div id="img2" class="changing-images"></div>
+                    <div id="img3" class="changing-images"></div>
+                    <div id="img4" class="changing-images"></div>
+                </div>
+            </center>
+            <br />
+            <center>
+                <h2 style="color:blue;font-size:45px;">לקנות מכל מקום, בשיא הנוחות והקלילות</h2>
+                <br />
+                <h1 style="color:yellow; font-size:60px;">קניות שעושות לך טוב...</h1>
+            </center>
+        </div>
     </div>
-    </div>
-    <a href="shop/product.aspx?ProductId=18">click here</a>
 </asp:Content>

@@ -10,6 +10,8 @@ namespace Nave_Project2.Components
 {
     public class Product
     {
+        // מחלקה הנועדה לייצג מוצר בקוד
+        // זוהי המחלקה הבסיסית ליצירת עגלת הקניות
         public int Id { get; set; }
         public string Name { get; set; }
         public string Price { get; set; }

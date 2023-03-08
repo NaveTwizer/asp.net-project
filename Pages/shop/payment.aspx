@@ -60,7 +60,7 @@
                 </div>
                 <div id="GoodFeedback" runat="server"></div>
                 <div>
-                    <asp:Button runat="server" ID="Pay_Button" Text="שלם" OnClick="Pay_Button_Click" CausesValidation="false" />
+                    <asp:Button runat="server" ID="PayButton" Text="שלם" OnClick="PayButton_Click1" />
                 </div>
             </div>
         </form>

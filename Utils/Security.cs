@@ -9,6 +9,7 @@ namespace Nave_Project2.Utils
     {
         public static void RedirectUnloggedUser(HttpContext context)
         {
+            // פעולה שנועדה למנוע ממשתמשים לא רשומים לגשת לאזורים הלא מורשים להם
             var Session = context.Session;
             try
             {
@@ -16,18 +17,19 @@ namespace Nave_Project2.Utils
             }
             catch (Exception)
             {
-                context.Response.Redirect("~/Pages/login.aspx", true);
+                context.Response.Redirect("~/Pages/auth/login", true);
                 return;
             }
             String username = Session["username"].ToString();
             if (String.IsNullOrEmpty(username))
             {
-                context.Response.Redirect("~/Pages/login.aspx", true);
+                context.Response.Redirect("~/Pages/auth/login", true);
                 return;
             }
         }
         public static void RedirectLoggedUserFromAdminePages(HttpContext ctx)
         {
+            // פעולה שנועדה למנוע מלקוחות רשומים מלהגיע לאיזורי מנהל
             var Session = ctx.Session;
             try
             {
@@ -35,13 +37,13 @@ namespace Nave_Project2.Utils
             }
             catch (Exception)
             {
-                ctx.Response.Redirect("~/Pages/login.aspx", true);
+                ctx.Response.Redirect("~/Pages/auth/login", true);
                 return;
             }
             String username = Session["username"].ToString();
             if (String.IsNullOrEmpty(username))
             {
-                ctx.Response.Redirect("~/Pages/login.aspx", true);
+                ctx.Response.Redirect("~/Pages/auth/login", true);
                 return;
             }
             if (!username.Equals("nave"))

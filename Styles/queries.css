@@ -1,0 +1,14 @@
+﻿body {
+    direction: rtl;
+    background-color: gray;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr, td {
+    border: 1px solid black;
+    font-size: 35px;
+    text-align: center;
+}

@@ -24,15 +24,6 @@ namespace Nave_Project2.Master_Pages
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
 
         /// <summary>
-        /// a0 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink a0;
-
-        /// <summary>
         /// a2 control.
         /// </summary>
         /// <remarks>

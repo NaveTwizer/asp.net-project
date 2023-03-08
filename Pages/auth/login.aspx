@@ -1,40 +1,33 @@
-﻿<%@ Page Title="התחברות" Language="C#" MasterPageFile="~/Master Pages/Master1.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Nave_Project2.Pages.login" %>
+﻿<%@ Page Title="כניסה" Language="C#" MasterPageFile="~/Master Pages/Master1.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Nave_Project2.Pages.auth.login2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="/Styles/login.css" rel="stylesheet" />
-    <style type="text/css">
-        body {
-            background:url(/images/login.jpg) no-repeat;
-            background-size:cover;
-        }
-    </style>
+    <link href="../../Styles/login.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container">
-        <div class="form-div">
-            <form runat="server" id="form1" onsubmit="return onSubmit()" method="post" action="login.aspx">
-                <label>שם משתמש</label>
-                <div>
-                    <input type="text" name="username" id="username"/>
-                    <span id="username-error-span" style="display:none;">⚠</span>
-                    <div class="div-error" id="username-error-div"></div>
+    <div class="fullscreen" style="height:91.1vh;">
+        <div class="form-container">
+            <h1 class="form-title">התחבר לחשבון שלך</h1>
+            <br /><br />
+            <form runat="server" action="login.aspx" method="post">
+                <div class="error" id="error" runat="server">
+                    הפרטים אינם נכונים
+                    <br />
                 </div>
-                <br />
-                <label>סיסמה</label>
                 <div>
-                    <input type="password" name="pswd" id="pswd" size="25"/>
-                    <span id="password-error-span" style="display:none;">⚠</span>
-                    <div class="div-error" id="password-error-div"></div>
+                    <input type="text" name="username" id="username" placeholder="שם משתמש" class="inputs" />
                 </div>
                 <br />
                 <div>
-                    <a href="/Pages/profile/forgot-password.aspx">שכחתי סיסמה</a>
+                    <input type="password" name="pswd" id="pswd" placeholder="סיסמה" class="inputs" />
                 </div>
-                <input type="submit" value="היכנס" />
-                <input type="reset" value="נקה" />
-                <div id="BadFeedback" runat="server" style="color:red;"></div>
-                <div id="GoodFeedback" runat="server" style="color:green;"></div>
+                <br />
+                <div class="forgot-password-wrapper">
+                    <a href="forgot-password.aspx" class="forgot-password">שכחת סיסמה?</a>
+                </div>
+                <br />
+                <div class="submit-wrapper">
+                    <asp:Button ID="SubmitButton" runat="server" Text="היכנס" OnClick="SubmitButton_Click" CssClass="btn" />
+                </div>
             </form>
         </div>
     </div>
-    <script src="../../Scripts/login.js"></script>
 </asp:Content>

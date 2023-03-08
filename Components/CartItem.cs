@@ -7,6 +7,8 @@ namespace Nave_Project2.Components
 {
     public class CartItem : IEquatable<CartItem>
     {
+        // מחלקה הנועדה לייצג פריט בעגלת הקניות
+        // Product מחלקה זו משתמשת במחלקת 
         public int Quantity { get; set; }
 
         private int _productId;

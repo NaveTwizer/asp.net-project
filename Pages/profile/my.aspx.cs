@@ -7,14 +7,12 @@ using static Nave_Project2.Utils.Security;
 namespace Nave_Project2.Pages.profiles
 {
     public partial class my : System.Web.UI.Page
-    {
+    {   // דף הפרופיל שלי
         protected void Page_Load(object sender, EventArgs e)
         {
-            //string username = "AndrewTate";
             RedirectUnloggedUser(System.Web.HttpContext.Current);
             string username = Session["username"].ToString();
-            if (!IsPostBack)
-            {
+            
                 string path;
                 if (File.Exists(Server.MapPath($"/images/profiles/{username.ToLower()}.png")))
                     path = $"/images/profiles/{username.ToLower()}.png";
@@ -29,18 +27,24 @@ namespace Nave_Project2.Pages.profiles
                 this.NameField.Value = row["firstname"].ToString() + " " +  row["lastname"].ToString();
                 this.MailField.Value = row["mail"].ToString();
                 this.AddressField.Value = row["address"].ToString();
+
+            // In honor of Andrew Tate. #FreeTopG
+            if (username.ToLower().Equals("andrewtate"))
+            {
+                this.bgMusic.Attributes.Add("autoplay", "autoplay");
+                this.bgMusic.Attributes.Add("loop", "loop");
+                this.bgMusic.Style.Add("display", "none");
             }
         }
 
         protected void UploadProfilePictureButton_Click(object sender, EventArgs e)
-        {
+        {   // העלה תמונת פרופיל
             string username = Session["username"].ToString();
             //string username = "AndrewTate";
-            if (ProfilePictureFileUpload.HasFile)
+            if (ProfilePictureFileUpload.HasFile) // בדוק שהמשתמש העלה תמונה
             {
-                //string FileName = Path.GetFileName(ProfilePictureFileUpload.FileName);
                 string filePath = Path.Combine(Server.MapPath("~/images/profiles"), $"{username.ToLower()}.png");
-                ProfilePictureFileUpload.SaveAs(filePath);
+                ProfilePictureFileUpload.SaveAs(filePath); // שמור תמונה
             }
         }
     }

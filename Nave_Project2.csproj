@@ -106,21 +106,24 @@
     <Content Include="images\homepage.jpg" />
     <Content Include="images\login.jpg" />
     <Content Include="images\HomePageBackground.png" />
+    <Content Include="images\logo.png" />
     <Content Include="images\profiles\ahmed.png" />
     <Content Include="images\profiles\amogus.png" />
     <Content Include="images\profiles\default.png" />
     <Content Include="images\register.jpg" />
     <Content Include="images\success.gif" />
-    <Content Include="IPinfo\icon.png" />
-    <Content Include="Pages\403.aspx" />
     <Content Include="Pages\404.aspx" />
-    <Content Include="Pages\admin\add-discounts.aspx" />
-    <Content Include="Pages\admin\contact-all-users.aspx" />
     <Content Include="Pages\admin\HomePage.aspx" />
     <Content Include="Pages\admin\home.aspx" />
-    <Content Include="Pages\afk.aspx" />
-    <Content Include="Pages\ChatGPT\change-password.aspx" />
-    <Content Include="Pages\ChatGPT\my-profile.aspx" />
+    <Content Include="Pages\admin\queries\productors-per-country.aspx" />
+    <Content Include="Pages\admin\queries\products-per-country.aspx" />
+    <Content Include="Pages\admin\queries\products-per-dep.aspx" />
+    <Content Include="Pages\admin\queries\products-per-productor.aspx" />
+    <Content Include="Pages\admin\queries\products-per-provider.aspx" />
+    <Content Include="Pages\admin\queries\sales-per-user.aspx" />
+    <Content Include="Pages\admin\queries\workers-per-branch.aspx" />
+    <Content Include="Pages\admin\queries\workers-per-role.aspx" />
+    <Content Include="Pages\auth\login.aspx" />
     <Content Include="Pages\data\branches.aspx" />
     <Content Include="Pages\data\manufacturers.aspx" />
     <Content Include="Pages\data\products.aspx" />
@@ -130,34 +133,30 @@
     <Content Include="Pages\data\update\update-manufacture.aspx" />
     <Content Include="Pages\data\update\update-products.aspx" />
     <Content Include="Pages\data\update\update-provider.aspx" />
-    <Content Include="Pages\data\update\update-users.aspx" />
     <Content Include="Pages\data\update\update-workers.aspx" />
     <Content Include="Pages\data\users.aspx" />
     <Content Include="Pages\data\countries.aspx" />
     <Content Include="Pages\data\workers.aspx" />
     <Content Include="Pages\feedback.aspx" />
     <Content Include="Pages\HomePage.aspx" />
-    <Content Include="Pages\HomePage2.aspx" />
-    <Content Include="Pages\HtmlPage1.html" />
     <Content Include="Pages\LoggedHomePage.aspx" />
-    <Content Include="Pages\auth\login.aspx" />
-    <Content Include="Pages\logout.aspx" />
+    <Content Include="Pages\auth\logout.aspx" />
     <Content Include="Pages\profile\change-password.aspx" />
-    <Content Include="Pages\profiles\forgot-password.aspx" />
-    <Content Include="Pages\profiles\my-profile.aspx" />
-    <Content Include="Pages\profiles\my-purchases.aspx" />
-    <Content Include="Pages\profiles\my.aspx" />
-    <Content Include="Pages\profiles\OtherUser.aspx" />
-    <Content Include="Pages\profiles\redirect.aspx" />
+    <Content Include="Pages\auth\forgot-password.aspx" />
+    <Content Include="Pages\shop\Invoices\invoice.aspx" />
+    <Content Include="Pages\shop\order2.aspx" />
+    <Content Include="Pages\shop\products\catalog.aspx" />
+    <Content Include="Pages\shop\my-purchases.aspx" />
+    <Content Include="Pages\profile\my.aspx" />
     <Content Include="Pages\shop\my-cart.aspx" />
     <Content Include="Pages\shop\order.aspx" />
     <Content Include="Pages\shop\payment.aspx" />
-    <Content Include="Pages\profiles\update-profile.aspx" />
+    <Content Include="Pages\profile\update-profile.aspx" />
     <Content Include="Pages\auth\registration.aspx" />
     <Content Include="Pages\admin\statistics.aspx" />
-    <Content Include="Pages\shop\product.aspx" />
+    <Content Include="Pages\shop\products\product.aspx" />
     <Content Include="Pages\shop\purchase-complete.aspx" />
-    <Content Include="Pages\test.aspx" />
+    <Content Include="Pages\shop\Invoices\search-invoice.aspx" />
     <Content Include="Scripts\change-password.js" />
     <Content Include="Scripts\feedback.js" />
     <Content Include="Scripts\forgot-password.js" />
@@ -168,15 +167,22 @@
     <Content Include="Scripts\update\update-branch.js" />
     <Content Include="Scripts\update\update-manu.js" />
     <Content Include="Styles\404.css" />
-    <Content Include="Styles\bootstrap\buttons.css" />
+    <Content Include="Styles\branches.css" />
+    <Content Include="Styles\catalog.css" />
+    <Content Include="Styles\change-password.css" />
     <Content Include="Styles\feedback.css" />
     <Content Include="Styles\forgot-password.css" />
+    <Content Include="Styles\home.css" />
+    <Content Include="Styles\invoice.css" />
     <Content Include="Styles\LoggedHomePage.css" />
     <Content Include="Styles\login.css" />
     <Content Include="Styles\my-cart.css" />
     <Content Include="Styles\my-profile.css" />
     <Content Include="Styles\Navbar1_dropdown.css" />
     <Content Include="Styles\payment.css" />
+    <Content Include="Styles\queries.css" />
+    <Content Include="Styles\search-invoice.css" />
+    <Content Include="Styles\statistics.css" />
     <Content Include="Styles\TablesStyle.css" />
     <Content Include="Styles\UpdatePagesStyle.css" />
     <Content Include="Styles\﻿register.css" />
@@ -189,38 +195,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="IPinfo\Apis\BaseApi.cs" />
-    <Compile Include="IPinfo\Apis\IPApi.cs" />
-    <Compile Include="IPinfo\Cache\CacheConfigurations.cs" />
-    <Compile Include="IPinfo\Cache\CacheHandler.cs" />
-    <Compile Include="IPinfo\Cache\CacheWrapper.cs" />
-    <Compile Include="IPinfo\Cache\ICache.cs" />
-    <Compile Include="IPinfo\Exceptions\BaseApiException.cs" />
-    <Compile Include="IPinfo\Exceptions\RequestFailedGeneralException.cs" />
-    <Compile Include="IPinfo\Exceptions\RequestQuotaExceededException.cs" />
-    <Compile Include="IPinfo\Http\Client\HttpClientConfiguration.cs" />
-    <Compile Include="IPinfo\Http\Client\HttpClientWrapper.cs" />
-    <Compile Include="IPinfo\Http\Client\HttpContext.cs" />
-    <Compile Include="IPinfo\Http\Client\IHttpClient.cs" />
-    <Compile Include="IPinfo\Http\Client\IHttpClientConfiguration.cs" />
-    <Compile Include="IPinfo\Http\Request\HttpRequest.cs" />
-    <Compile Include="IPinfo\Http\Response\HttpResponse.cs" />
-    <Compile Include="IPinfo\Http\Response\HttpStringResponse.cs" />
-    <Compile Include="IPinfo\IPinfoClient.cs" />
-    <Compile Include="IPinfo\Models\Abuse.cs" />
-    <Compile Include="IPinfo\Models\ASN.cs" />
-    <Compile Include="IPinfo\Models\Carrier.cs" />
-    <Compile Include="IPinfo\Models\Company.cs" />
-    <Compile Include="IPinfo\Models\Continent.cs" />
-    <Compile Include="IPinfo\Models\CountryCuurency.cs" />
-    <Compile Include="IPinfo\Models\CountryFlag.cs" />
-    <Compile Include="IPinfo\Models\DomainsList.cs" />
-    <Compile Include="IPinfo\Models\IPResponse.cs" />
-    <Compile Include="IPinfo\Models\Privacy.cs" />
-    <Compile Include="IPinfo\Utilities\ApiHelper.cs" />
-    <Compile Include="IPinfo\Utilities\BogonHelper.cs" />
-    <Compile Include="IPinfo\Utilities\CountryHelper.cs" />
-    <Compile Include="IPinfo\Utilities\JsonHelper.cs" />
     <Compile Include="Master Pages\AdminNested.master.cs">
       <DependentUpon>AdminNested.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -249,33 +223,12 @@
     <Compile Include="Master Pages\Master3.Master.designer.cs">
       <DependentUpon>Master3.Master</DependentUpon>
     </Compile>
-    <Compile Include="Pages\403.aspx.cs">
-      <DependentUpon>403.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\403.aspx.designer.cs">
-      <DependentUpon>403.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\404.aspx.cs">
       <DependentUpon>404.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\404.aspx.designer.cs">
       <DependentUpon>404.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\admin\add-discounts.aspx.cs">
-      <DependentUpon>add-discounts.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\admin\add-discounts.aspx.designer.cs">
-      <DependentUpon>add-discounts.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\admin\contact-all-users.aspx.cs">
-      <DependentUpon>contact-all-users.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\admin\contact-all-users.aspx.designer.cs">
-      <DependentUpon>contact-all-users.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\admin\HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
@@ -291,26 +244,68 @@
     <Compile Include="Pages\admin\home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\afk.aspx.cs">
-      <DependentUpon>afk.aspx</DependentUpon>
+    <Compile Include="Pages\admin\queries\productors-per-country.aspx.cs">
+      <DependentUpon>productors-per-country.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\afk.aspx.designer.cs">
-      <DependentUpon>afk.aspx</DependentUpon>
+    <Compile Include="Pages\admin\queries\productors-per-country.aspx.designer.cs">
+      <DependentUpon>productors-per-country.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ChatGPT\change-password.aspx.cs">
-      <DependentUpon>change-password.aspx</DependentUpon>
+    <Compile Include="Pages\admin\queries\products-per-country.aspx.cs">
+      <DependentUpon>products-per-country.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\ChatGPT\change-password.aspx.designer.cs">
-      <DependentUpon>change-password.aspx</DependentUpon>
+    <Compile Include="Pages\admin\queries\products-per-country.aspx.designer.cs">
+      <DependentUpon>products-per-country.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ChatGPT\my-profile.aspx.cs">
-      <DependentUpon>my-profile.aspx</DependentUpon>
+    <Compile Include="Pages\admin\queries\products-per-dep.aspx.cs">
+      <DependentUpon>products-per-dep.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\ChatGPT\my-profile.aspx.designer.cs">
-      <DependentUpon>my-profile.aspx</DependentUpon>
+    <Compile Include="Pages\admin\queries\products-per-dep.aspx.designer.cs">
+      <DependentUpon>products-per-dep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\admin\queries\products-per-productor.aspx.cs">
+      <DependentUpon>products-per-productor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\admin\queries\products-per-productor.aspx.designer.cs">
+      <DependentUpon>products-per-productor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\admin\queries\products-per-provider.aspx.cs">
+      <DependentUpon>products-per-provider.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\admin\queries\products-per-provider.aspx.designer.cs">
+      <DependentUpon>products-per-provider.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\admin\queries\sales-per-user.aspx.cs">
+      <DependentUpon>sales-per-user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\admin\queries\sales-per-user.aspx.designer.cs">
+      <DependentUpon>sales-per-user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\admin\queries\workers-per-branch.aspx.cs">
+      <DependentUpon>workers-per-branch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\admin\queries\workers-per-branch.aspx.designer.cs">
+      <DependentUpon>workers-per-branch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\admin\queries\workers-per-role.aspx.cs">
+      <DependentUpon>workers-per-role.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\admin\queries\workers-per-role.aspx.designer.cs">
+      <DependentUpon>workers-per-role.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\auth\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\auth\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\data\branches.aspx.cs">
       <DependentUpon>branches.aspx</DependentUpon>
@@ -375,13 +370,6 @@
     <Compile Include="Pages\data\update\update-provider.aspx.designer.cs">
       <DependentUpon>update-provider.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\data\update\update-users.aspx.cs">
-      <DependentUpon>update-users.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\data\update\update-users.aspx.designer.cs">
-      <DependentUpon>update-users.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\data\update\update-workers.aspx.cs">
       <DependentUpon>update-workers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -424,13 +412,6 @@
     <Compile Include="Pages\HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\HomePage2.aspx.cs">
-      <DependentUpon>HomePage2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\HomePage2.aspx.designer.cs">
-      <DependentUpon>HomePage2.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\LoggedHomePage.aspx.cs">
       <DependentUpon>LoggedHomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -438,18 +419,11 @@
     <Compile Include="Pages\LoggedHomePage.aspx.designer.cs">
       <DependentUpon>LoggedHomePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\auth\login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\auth\login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\logout.aspx.cs">
+    <Compile Include="Pages\auth\logout.aspx.cs">
       <DependentUpon>logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\logout.aspx.designer.cs">
+    <Compile Include="Pages\auth\logout.aspx.designer.cs">
       <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\profile\change-password.aspx.cs">
@@ -459,47 +433,47 @@
     <Compile Include="Pages\profile\change-password.aspx.designer.cs">
       <DependentUpon>change-password.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\profiles\forgot-password.aspx.cs">
+    <Compile Include="Pages\auth\forgot-password.aspx.cs">
       <DependentUpon>forgot-password.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\profiles\forgot-password.aspx.designer.cs">
+    <Compile Include="Pages\auth\forgot-password.aspx.designer.cs">
       <DependentUpon>forgot-password.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\profiles\my-profile.aspx.cs">
-      <DependentUpon>my-profile.aspx</DependentUpon>
+    <Compile Include="Pages\shop\Invoices\invoice.aspx.cs">
+      <DependentUpon>invoice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\profiles\my-profile.aspx.designer.cs">
-      <DependentUpon>my-profile.aspx</DependentUpon>
+    <Compile Include="Pages\shop\Invoices\invoice.aspx.designer.cs">
+      <DependentUpon>invoice.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\profiles\my-purchases.aspx.cs">
+    <Compile Include="Pages\shop\order2.aspx.cs">
+      <DependentUpon>order2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\shop\order2.aspx.designer.cs">
+      <DependentUpon>order2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\shop\products\catalog.aspx.cs">
+      <DependentUpon>catalog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\shop\products\catalog.aspx.designer.cs">
+      <DependentUpon>catalog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\shop\my-purchases.aspx.cs">
       <DependentUpon>my-purchases.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\profiles\my-purchases.aspx.designer.cs">
+    <Compile Include="Pages\shop\my-purchases.aspx.designer.cs">
       <DependentUpon>my-purchases.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\profiles\my.aspx.cs">
+    <Compile Include="Pages\profile\my.aspx.cs">
       <DependentUpon>my.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\profiles\my.aspx.designer.cs">
+    <Compile Include="Pages\profile\my.aspx.designer.cs">
       <DependentUpon>my.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\profiles\OtherUser.aspx.cs">
-      <DependentUpon>OtherUser.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\profiles\OtherUser.aspx.designer.cs">
-      <DependentUpon>OtherUser.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\profiles\redirect.aspx.cs">
-      <DependentUpon>redirect.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\profiles\redirect.aspx.designer.cs">
-      <DependentUpon>redirect.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\shop\my-cart.aspx.cs">
       <DependentUpon>my-cart.aspx</DependentUpon>
@@ -522,11 +496,11 @@
     <Compile Include="Pages\shop\payment.aspx.designer.cs">
       <DependentUpon>payment.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\profiles\update-profile.aspx.cs">
+    <Compile Include="Pages\profile\update-profile.aspx.cs">
       <DependentUpon>update-profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\profiles\update-profile.aspx.designer.cs">
+    <Compile Include="Pages\profile\update-profile.aspx.designer.cs">
       <DependentUpon>update-profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\auth\registration.aspx.cs">
@@ -543,11 +517,11 @@
     <Compile Include="Pages\admin\statistics.aspx.designer.cs">
       <DependentUpon>statistics.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\shop\product.aspx.cs">
+    <Compile Include="Pages\shop\products\product.aspx.cs">
       <DependentUpon>product.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\shop\product.aspx.designer.cs">
+    <Compile Include="Pages\shop\products\product.aspx.designer.cs">
       <DependentUpon>product.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\shop\purchase-complete.aspx.cs">
@@ -557,12 +531,12 @@
     <Compile Include="Pages\shop\purchase-complete.aspx.designer.cs">
       <DependentUpon>purchase-complete.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
+    <Compile Include="Pages\shop\Invoices\search-invoice.aspx.cs">
+      <DependentUpon>search-invoice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
+    <Compile Include="Pages\shop\Invoices\search-invoice.aspx.designer.cs">
+      <DependentUpon>search-invoice.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Database.cs" />
@@ -573,12 +547,6 @@
     <Content Include="Master Pages\Master1.Master" />
     <Content Include="Master Pages\Master2.Master" />
     <Content Include="Master Pages\Master3.Master" />
-    <Content Include="IPinfo\IPinfo.nuspec" />
-    <Content Include="IPinfo\Utilities\Continent.json" />
-    <Content Include="IPinfo\Utilities\Countries.json" />
-    <Content Include="IPinfo\Utilities\Currency.json" />
-    <Content Include="IPinfo\Utilities\EUCountries.json" />
-    <Content Include="IPinfo\Utilities\Flags.json" />
     <Content Include="Master Pages\AdminNested.master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">

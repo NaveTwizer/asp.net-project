@@ -18,68 +18,59 @@
             direction:rtl;
         }
         .sidebar {
-          margin: 0;
-          padding: 0;
-          width: 10%;
-          background-color: #f1f1f1;
-          position: fixed;
-          display:block;
-          height: 100%;
-          overflow: auto;
-          float:right;
+            margin: 0;
+            padding: 0;
+            width: 10%;
+            background-color: #f1f1f1;
+            position: fixed;
+            display:block;
+            height: 100%;
+            overflow: auto;
+            float:right;
+            background-color:darkgray;
         }
 
         .sidebar a {
-          display: block;
-          color: black;
-          padding: 16px;
-          text-decoration: none;
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
         }
 
         .sidebar a.active {
-          background-color: #04AA6D;
-          color: white;
+            background-color: #04AA6D;
+            color: white;
         }
 
         .sidebar a:hover:not(.active) {
-          background-color: #555;
-          color: white;
+            background-color: #555;
+            color: white;
         }
 
         div.content {
-          margin-left: 200px;
-          padding: 1px 16px;
-          height: 1000px;
+            margin-left: 200px;
+            padding: 1px 16px;
+            height: 1000px;
         }
 
-        @media screen and (max-width: 700px) {
-          .sidebar {
-            width: 100%;
-            height: auto;
-            position: relative;
-          }
-          .sidebar a {float: left;}
-          div.content {margin-left: 0;}
+        .menu-items {
+            transition:opacity 500ms ease;
         }
-
-        @media screen and (max-width: 400px) {
-          .sidebar a {
-            text-align: center;
-            float: none;
-          }
+        .sidebar:hover > .menu-items {
+            opacity:0.65;
+        }
+        .sidebar:hover > .menu-items:hover {
+            opacity:1;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="sidebar">
-        <a class="active" href="/Pages/profile/my-profile.aspx">הפרופיל שלי</a>
-        <a href="/Pages/data/users.aspx">משתמשים</a>
-        <a href="/Pages/data/workers.aspx">עובדים</a>
-        <a href="/Pages/admin/add-discounts.aspx">הוסף הנחות יומיות</a>
-        <a href="/Pages/admin/contact-all-users.aspx">שלח מייל לכל העובדים או המשתמשים</a>
-        <a href="/Pages/admin/statistics.aspx">סטטיסטיקה</a>
+        <a href="/Pages/profile/my-profile" class="menu-items">הפרופיל שלי</a>
+        <a href="/Pages/data/users.aspx" class="menu-items">משתמשים</a>
+        <a href="/Pages/data/workers.aspx" class="menu-items">עובדים</a>
+        <a href="/Pages/admin/statistics.aspx" class="menu-items">סטטיסטיקה</a>
     </div>
-
     <div class="content">
         <asp:ContentPlaceHolder runat="server" ID="head"></asp:ContentPlaceHolder>
     </div>

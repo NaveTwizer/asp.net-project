@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="הרשמה" Language="C#" MasterPageFile="~/Master Pages/Master1.Master" AutoEventWireup="true" CodeBehind="registration.aspx.cs" Inherits="Nave_Project2.Pages.registration" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="../Styles/﻿register.css" rel="stylesheet" />
+    <link href="../../Styles/﻿register.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="fullscreen" dir="rtl">

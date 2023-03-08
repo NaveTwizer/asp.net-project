@@ -1,0 +1,57 @@
+﻿body {
+    direction: rtl;
+    background-color: gray;
+}
+
+.top, .middle, .bottom {
+    border:2px solid black;
+    border-collapse:collapse;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.circle-wrapper {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    height: 100px;
+}
+
+.circle {
+    width: 120px;
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 32px;
+    border: 3px solid #000;
+}
+
+.title {
+    text-align: center;
+    font-size: 35px;
+}
+
+p {
+    font-size: 20px;
+    padding-right: 25px;
+}
+
+.select {
+    font-size: 20px;
+}
+
+.buttons {
+    padding: 10px 20px;
+    font-size: 25px;
+}
+
+h1[id="queries-header"], h1[id="avg-header"] {
+    font-size:50px;
+}
+ul[id="queries"] a {
+    font-size:35px;
+    color:blue;
+}

@@ -18,6 +18,7 @@ namespace Nave_Project2.Pages.data
         }
         private string GetBranchesTable(DataSet ds)
         {
+            // בונה טבלת סניפים ומציג אותה על המסך
             string table = "<table><tr><td>קוד סניף</td><td>שם סניף</td><td>כתובת</td><td>טלפון</td></tr>";
             string[] values = { "BranchesCode", "BranchesName", "BranchesAddress", "BranchesPhone"};
             foreach (DataRow row in ds.Tables[0].Rows)
@@ -32,7 +33,7 @@ namespace Nave_Project2.Pages.data
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            RedirectLoggedUserFromAdminePages(HttpContext.Current);
+            RedirectLoggedUserFromAdminePages(HttpContext.Current); // redirect non admins
             if (!IsPostBack)
             {
                 this.BranchesDiv.InnerHtml = GetBranchesTable(GetDataSet("SELECT * FROM BranchesTable"));

@@ -1,0 +1,32 @@
+﻿body {
+    direction: rtl;
+    background-color: gray;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 25px;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.links {
+    text-decoration: none;
+    color: blue;
+}
+
+label {
+    font-size: 35px;
+}
+
+input {
+    padding: 10px 0;
+    font-size: 25px;
+}
+
+.search {
+    padding: 10px 30px;
+}

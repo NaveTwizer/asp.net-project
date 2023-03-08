@@ -1,52 +1,6 @@
 ﻿<%@ Page Title="משוב" Language="C#" MasterPageFile="~/Master Pages/Master2.Master" AutoEventWireup="true" CodeBehind="feedback.aspx.cs" Inherits="Nave_Project2.Pages.feedbacl" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="/Styles/feedback.css" rel="stylesheet" />
-    <style type="text/css">
-        body {
-            direction:rtl;
-            background-color:gray;
-        }
-        .border-1px-black {
-            border:1px solid black;
-            border-collapse:collapse;
-        }
-        .full-height {
-            height:100%;
-        }
-        .form {
-            position:absolute;
-            top:50%;
-            left:50%;
-            transform:translate(-50%, -50%);
-            text-align:right;
-            padding:30px;
-        }
-        ._title {
-            text-align:center;
-            font-size:2rem;
-        }
-        label {
-            color:black;
-            font-size:30px;
-        }
-        .inputs {
-            border:1px solid black;
-            text-align:right;
-            width:100%;
-            padding:10px 0 10px 0;
-            text-align:center;
-            font-size:25px;
-            background-color:lightblue;
-        }
-        .errors {
-            color:red;
-        }
-        .buttons {
-            background-color:aqua;
-            width:100%;
-            padding:10px 0 10px 0;
-        }
-    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
@@ -55,25 +9,25 @@
             <div>
                 <label>מה דעתך על האתר שלנו?</label>
                 <br />
-                <input id="opinion" name="opinion" class="inputs" />
+                <input id="opinion" name="opinion" class="inputs" type="number" min="1" max="5" />
                 <div id="opinionError" class="errors"></div>
             </div>
             <div>
                 <label>מה דעתך על הנגישות באתר?</label>
                 <br />
-                <input id="access" name="access" class="inputs" />
+                <input id="access" name="access" class="inputs" type="number" min="1" max="5" />
                 <div class="errors" id="accessError"></div>
             </div>
             <div>
                 <label>מה דעתך על איכות המוצרים שלנו?</label>
                 <br />
-                <input id="quality" name="quality" class="inputs" />
+                <input id="quality" name="quality" class="inputs" type="number" min="1" max="5" />
                 <div class="errors" id="qualityError"></div>
             </div>
             <div>
                 <label>מה דעתך על עיצוב האתר?</label>
                 <br />
-                <input id="design" name="design" class="inputs" />
+                <input id="design" name="design" class="inputs" type="number" min="1" max="5" />
                 <%--סך רכישות למשתמש--%>
                 <div class="errors" id="designError"></div>
             </div>

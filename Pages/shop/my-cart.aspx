@@ -7,10 +7,9 @@
             text-align:center;
             background-color:aqua;
             border:1px solid aqua;
-        }
-        .btn-large {
-            padding:15px 40px 15px 70px;
-            font-size:1rem;
+
+            padding:15px;
+            font-size:1.5rem;
         }
     </style>
 </asp:Content>
@@ -20,8 +19,9 @@
     <div class="footer" id="ToPay" runat="server"></div>
     <div class="bottom">
         <form runat="server">
-            <asp:Button ID="PayButton" runat="server" Text="שלם" OnClick="PayButton_Click" CssClass="btn btn-large" />
-        </form>
+            <asp:Button ID="PayButton" runat="server" Text="שלם" OnClick="PayButton_Click" CssClass="btn" />
+            <asp:Button ID="ClearCartButton" runat="server" Text="נקה את העגלה" CssClass="btn" OnClick="ClearCartButton_Click" />
+        </form> 
     </div>
     <script src="../../Scripts/my-cart.js"></script>
 </asp:Content>

@@ -7,7 +7,7 @@
     <title>הזמן מוצרים</title>
     <style type="text/css">
         body {
-            background-color:royalblue;
+            background-color:gray;
         }
         form {
             position:absolute;
@@ -24,6 +24,13 @@
         #product {
             border:1px solid black;
             text-align:center;
+            font-size:25px;
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+        #amount {
+            padding-top:10px;
+            padding-bottom:10px;
             font-size:20px;
         }
         .inline {
@@ -35,9 +42,10 @@
             display:inline;
             width:50%;
             padding:10px 0 10px 0;
+            font-size:30px;
         }
         #amount {
-            padding:10px 0 10px 0;
+            padding:15px;
             text-align:center;
         }
         .btn {
@@ -49,6 +57,9 @@
         .btn-large {
             padding:15px 40px 15px 40px;
             font-size:1rem;
+        }
+        a[href="my-cart.aspx"] {
+            font-size:30px;
         }
     </style>
 </head>
@@ -63,15 +74,15 @@
             <input name="amount" id="amount" type="text" />
         </div>
         <br /><br />
-        <div id="feedback" runat="server" style="color:green;"></div>
-        <div id="BadFeedback" runat="server" style="color:red;"></div>
+        <div id="feedback" runat="server" style="color:green; font-size:27px;"></div>
+        <div id="BadFeedback" runat="server" style="color:red; font-size:27px;"></div>
         <hr />
         <div class="inline">
             <input type="reset" value="נקה" class="buttons" />
             <asp:Button runat="server" ID="OrderButton" Text="הזמן" CssClass="buttons" />
         </div>
         <div>
-            <a href="my-cart.aspx">לעגלת הקניות שלי</a>
+            <a href="my-cart.aspx">לעגלת הקניות שלי וביצוע רכישה</a>
         </div>
     </form>
 </body>

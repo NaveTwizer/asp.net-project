@@ -4,17 +4,20 @@
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: gray;
 }
 
 .inline {
     display: inline-block;
 }
 
-.upper-navbar {
-    height: 6vh;
-}
 
+.account-info-div-inner {
+    /*padding-right:50px;*/
+}
+.account-info-div-inner h3 {
+    text-align:center;
+}
 .left-div {
     float: left;
     text-align: center;
@@ -23,7 +26,7 @@ body {
 }
 
 .right-div {
-    width: 70%;
+    width: 100%;
     background-color: white;
     height: 100vh;
 }
@@ -36,11 +39,11 @@ body {
     padding: 0px 10px 0px 10px;
 }
 
-    .links a {
-        text-decoration: none;
-        color: black;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+.links a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 .right-title {
     text-align: right;
@@ -48,10 +51,10 @@ body {
     font-size: 40px;
 }
 
-.right-content {
+/*.right-content {
     padding-left: 5%;
     padding-right: 5%;
-}
+}*/
 
 .choose-pfp-p {
     font-size: 20px;

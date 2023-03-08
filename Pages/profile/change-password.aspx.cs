@@ -5,7 +5,7 @@ using static Nave_Project2.Utils.Security;
 namespace Nave_Project2.Pages.profile
 {
     public partial class change_password : System.Web.UI.Page
-    {
+    {   // דף שינוי סיסמה
         protected void Page_Load(object sender, EventArgs e)
         {
             RedirectUnloggedUser(System.Web.HttpContext.Current);
@@ -22,8 +22,7 @@ namespace Nave_Project2.Pages.profile
         protected void ChangePasswordButton_Click(object sender, EventArgs e)
         {
             (string current, string NewPassword) = GetFormData();
-            //string username = Session["username"].ToString();
-            string username = "AndrewTate";
+            string username = Session["username"].ToString();
             DataSet ds = GetDataSet($"SELECT * FROM Users WHERE username='{username}' AND pswd='{current}'");
             if (ds.Tables[0].Rows.Count == 0)
             {

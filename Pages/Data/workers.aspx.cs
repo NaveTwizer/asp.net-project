@@ -17,7 +17,7 @@ namespace Nave_Project2.Pages.data
             return $"<td>{row[attr]}</td>";
         }
         private string GetWorkersTable(DataSet ds)
-        {
+        {   // פעולה המחזירה טבלה של העובדים כמחרוזת
             string table = "<table><tr><td>תעודת זהות</td><td>שם עובד</td><td>תאריך לידה</td><td>מין</td><td>תאריך התחלת עבודה</td><td>כתובת</td><td>טלפון</td><td>קוד סניף</td><td>תפקיד</td></tr>";
             string[] values = { "WorkerID", "WorkerName", "WorkerBDate", "WorkerGender", "WorkerStartDate", "WorkerAddress", "WorkerPhoneNum", "BranchesCode", "RoleName" };
             foreach (DataRow row in ds.Tables[0].Rows)
@@ -38,7 +38,7 @@ namespace Nave_Project2.Pages.data
         }
 
         protected void SearchWorker_Click(object sender, EventArgs e)
-        {
+        {   // חיפוש עובד לפי תעודת זהות
             string worker = Request.Form["worker"];
             string query = $"SELECT * FROM WorkersTable WHERE WorkerName LIKE '%{worker}%' OR WorkerID LIKE '%{worker}%'";
             this.TableDiv.InnerHtml = GetWorkersTable(GetDataSet(query));

@@ -12,6 +12,9 @@
             padding:15px 40px 15px 40px;
             font-size:1rem;
         }
+        td {
+            font-size:20px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

@@ -1,49 +1,6 @@
 ﻿<%@ Page Title="שינוי סיסמה" Language="C#" MasterPageFile="~/Master Pages/Master2.Master" AutoEventWireup="true" CodeBehind="change-password.aspx.cs" Inherits="Nave_Project2.Pages.profile.change_password" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        body {
-            background-color: #0085e2;
-            direction: rtl;
-        }
-        form {
-            background-color:white;
-            position:absolute;
-            top:50%;
-            left:50%;
-            transform:translate(-50%, -50%);
-            padding:50px;
-            width:25%;
-        }
-        .title {
-            font-weight: bold;
-            color: white;
-            text-align: center;
-            font-size: 55px;
-        }
-        .errors {
-            color: red;
-            text-align: right;
-            font-size: 25px;
-        }
-        label {
-            font-size:25px;
-        }
-        .inputs {
-            width:100%;
-            border:1px solid gray;
-            height:2.5rem;
-            font-size:1rem;
-        }
-        .button {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            background-color: #0087e6;
-            color: white;
-            border: none;
-            padding: 15px 10px 15px 10px;
-            font-size: 20px;
-            border-radius:10px;
-        }
-    </style>
+    <link href="../../Styles/change-password.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br /><br />

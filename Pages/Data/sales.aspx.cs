@@ -11,7 +11,7 @@ using static Nave_Project2.Utils.Security;
 namespace Nave_Project2.Pages.data
 {
     public partial class sales : System.Web.UI.Page
-    {
+    {   // מחלקת דף המכירות
         private string ParseRow(DataRow r, string attr)
         {
             return $"<td>{r[attr]}</td>";

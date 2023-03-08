@@ -7,23 +7,22 @@ using System.Web.UI.WebControls;
 using System.Data;
 using static Nave_Project2.Utils.Database;
 using static Nave_Project2.Components.ShoppingCart;
+using static Nave_Project2.Utils.Security;
 
 namespace Nave_Project2.Pages
 {
     public partial class order : System.Web.UI.Page
     {
-        private void Alert(string message)
-        {
-            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", $"alert('{message}')", true);
-        }
+        // טופס הזמנת מוצרים
         protected void Page_Load(object sender, EventArgs e)
         {
+            RedirectUnloggedUser(HttpContext.Current);
             this.BadFeedback.InnerText = "";
             this.feedback.InnerText = "";
             if (!IsPostBack)
             {
                 this.product.Items.Clear();
-                DataSet ds = GetDataSet("SELECT * FROM ProductsTable");
+                DataSet ds = GetDataSet("SELECT * FROM ProductsTable ORDER BY ProductName ASC");
                 string val;
                 foreach (DataRow row in ds.Tables[0].Rows)
                 {
@@ -33,7 +32,7 @@ namespace Nave_Project2.Pages
                     );
                 }
             }
-            // post req
+            // POST בקשת 
             else
             {
                 if (string.IsNullOrEmpty(Request.Form["Amount"]))

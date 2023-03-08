@@ -13,17 +13,17 @@
     <!-- Navbar -->
     <div class="navbar-div">
         <ul class="ul">
-            <li class="li">
+            <li class="li ">
                 <a href="/Pages/HomePage.aspx">בית</a>
             </li>
             <li class="li">
-                <a href="/Pages/login.aspx">התחבר</a>
+                <a href="/Pages/auth/login">התחבר</a>
             </li>
             <li class="li">
-                <a href="/Pages/registration.aspx">רישום</a>
+                <a href="/Pages/auth/registration">רישום</a>
             </li>
             <li class="li">
-                <a href="/Pages/logout.aspx">התנתק</a>
+                <a href="/Pages/shop/products/catalog">קטלוג</a>
             </li>
              <li class="dropDown li" style="padding:0;margin:0;">
                 <a>דפי מידע</a>
@@ -48,6 +48,5 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
     </div>
-    
 </body>
 </html>

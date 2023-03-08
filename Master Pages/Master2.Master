@@ -7,6 +7,9 @@
     <title></title>
     <link href="../Styles/Navbar1_dropdown.css" rel="stylesheet" />
     <style>
+        :root {
+            --h:70px;
+        }
         * {
             margin:0;
             padding:0;
@@ -14,17 +17,25 @@
         .topnav {
             text-align:center;
             background-color:#333;
-            padding-bottom:1%;
+            /*padding-bottom:1%;*/
+            height:var(--h);
+            display: flex;
+            align-items: center;
+            justify-content:center;
         }
         .topnav .a {
             text-align: center;
             color: #f2f2f2;
             text-align: center;
             text-decoration:dotted;
-            font-size: 25px;
+            font-size:30px;
             text-decoration:dashed;
             text-decoration-style:solid;
             padding:0 25px 15px 25px;
+            /*line-height:2em;*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .topnav .a:hover {
@@ -36,36 +47,29 @@
             background-color: #04AA6D;
             color: white;
         }
+        .logoimg {
+            height:var(--h);
+        }
+        .right {
+            float:right !important;
+        }
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <div>
-         <%--<div class="navbar-div">
-            <ul class="ul">
-                <li class="li">
-                    <a href="/Pages/LoggedHomePage.aspx">בית</a>
-                </li>
-                <li class="li">
-                    <a href="/Pages/information/about-us.html">אודותינו</a>
-                </li>
-                <li class="li">
-                    <a href="/Pages/feedback.aspx">משוב</a>
-                </li>
-                <li class="li">
-                    <a href="/Pages/logout.aspx">התנתק</a>
-                </li>
-            </ul>
-         </div>--%>
         <div class="topnav">
-            <asp:HyperLink runat="server" NavigateUrl="~/Pages/LoggedHomePage.aspx" CssClass="a" ID="a0">דף הבית</asp:HyperLink>
+
+            <asp:HyperLink runat="server" NavigateUrl="~/Pages/LoggedHomePage.aspx" CssClass="right">
+                <img src="/images/logo.png" class="logoimg" width="250"/>
+            </asp:HyperLink>
             <asp:HyperLink runat="server" NavigateUrl="~/Pages/information/about-us.html" CssClass="a" ID="a2">אודותינו</asp:HyperLink>
+            <asp:HyperLink runat="server" NavigateUrl="~/Pages/shop/order" CssClass="a">הזמן מוצרים</asp:HyperLink>
+            <asp:HyperLink runat="server" NavigateUrl="~/Pages/shop/products/catalog" CssClass="a">קטלוג</asp:HyperLink>
             <asp:HyperLink runat="server" NavigateUrl="~/Pages/feedback.aspx" CssClass="a" ID="a3">משוב</asp:HyperLink>
-            <asp:HyperLink runat="server" NavigateUrl="~/Pages/logout.aspx" CssClass="a" ID="a4">התנתק</asp:HyperLink>
+            <asp:HyperLink runat="server" NavigateUrl="~/Pages/auth/logout.aspx" CssClass="a" ID="a4">התנתק</asp:HyperLink>
         </div>
-
-
         <!--  Child Content  -->
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

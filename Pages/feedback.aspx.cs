@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 //using System.Web.UI.DataVisualization.Charting;
 using static Nave_Project2.Utils.Database;
-
+using static Nave_Project2.Utils.Security;
 
 namespace Nave_Project2.Pages
 {
@@ -15,6 +15,7 @@ namespace Nave_Project2.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            RedirectUnloggedUser(Context);
             this.output.InnerText = "";
         }
 

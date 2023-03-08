@@ -29,6 +29,7 @@ namespace Nave_Project2.Pages.data.update
         }
         protected void Page_Load(object sender, EventArgs e)
         {
+            RedirectUnloggedUser(HttpContext.Current);
             RedirectLoggedUserFromAdminePages(HttpContext.Current);
             if (IsPostBack)
             {
