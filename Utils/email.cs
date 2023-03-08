@@ -8,7 +8,7 @@ namespace Nave_Project2.Utils
 {
     public class Email
     {
-        private static string pswd = "dswsbzaazwfnkrdn";
+        private static string pswd = "my password";
         public static void SendMail(string ToAddress, string subject, string content, string FromAddress)
         {
             SmtpClient client = new SmtpClient
